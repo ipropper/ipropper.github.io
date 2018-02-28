@@ -1,4 +1,8 @@
-# How To Walk Like a Babylonian
+---
+layout: post
+title: "Walk Like A Babylonian"
+date: 2018-01-22 -0500
+---
 
 
 <a href="https://en.wikipedia.org/wiki/The_Richest_Man_in_Babylon_(book)">The Richest Man In Babylon</a> offers seven rules for handling money.
