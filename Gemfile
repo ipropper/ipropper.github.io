@@ -25,3 +25,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+# Added at 2018-02-26 19:08:28 -0500 by Ian:
+gem "jemoji", "~> 0.9.0"
