@@ -237,11 +237,11 @@ h2{
   margin-bottom:.3em;
 }
 .head-mysteries .subtitle{margin-bottom:0}
-/* the Mysteries tab reads as a blog: left-set, with a byline and a feed */
+/* the Mysteries tab reads as a blog: left-set, a feed of dated posts */
 .mysteries{text-align:left}
-.post-lead{padding-bottom:.5rem}
 .post-list{list-style:none;margin:0;padding:0}
 .post{padding:2rem 0;border-top:1px solid var(--grey-line)}
+.post-list .post:first-child{padding-top:0;border-top:0}
 .post-head{
   display:flex;
   flex-wrap:wrap;
@@ -265,27 +265,6 @@ h2{
   line-height:1.2;
   color:var(--ink);
   text-wrap:balance;
-}
-.post-lead .post-title{font-size:1.75rem;margin-bottom:1rem}
-.byline{display:flex;align-items:center;gap:.7rem;margin:0 0 1.3rem}
-.byline-avatar{
-  width:2.6rem;
-  height:2.6rem;
-  border-radius:50%;
-  border:1px solid var(--grey-line);
-  padding:.25rem;
-  background:var(--paper);
-}
-.byline-name{
-  margin:0;
-  font-weight:600;
-  font-size:.98rem;
-  color:var(--ink);
-}
-.byline-meta{
-  margin:0;
-  font-size:.85rem;
-  color:var(--grey);
 }
 .post-img{
   display:block;
