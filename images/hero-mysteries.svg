@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" role="img" aria-label="A ruined guard house on the treeline beneath a low moon">
+  <circle cx="392" cy="52" r="27" fill="none" stroke="#121212" stroke-width="3"/>
+  <g stroke="#121212" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M58 176 L58 74"/><path d="M58 112 L34 88"/><path d="M58 126 L82 100"/><path d="M58 96 L40 74"/><path d="M58 92 L76 72"/>
+    <path d="M436 176 L436 92"/><path d="M436 124 L414 104"/><path d="M436 134 L458 112"/><path d="M436 110 L420 92"/>
+    <path d="M110 176 L110 118"/><path d="M110 138 L94 122"/><path d="M110 144 L126 128"/>
+  </g>
+  <path d="M168 176 L168 104 L182 92 L196 108 L210 86 L224 102 L238 84 L252 100 L266 90 L280 106 L294 96 L308 108 L308 176Z" fill="#121212"/>
+  <path d="M196 176 L196 140 A18 18 0 0 1 232 140 L232 176Z" fill="#F4F1EC"/>
+  <rect x="256" y="124" width="26" height="24" fill="#F4F1EC"/>
+  <path d="M8 176 L472 176" stroke="#121212" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <g stroke="#121212" stroke-width="2.5" stroke-linecap="round" opacity=".35" fill="none">
+    <path d="M60 190 L190 190"/><path d="M230 190 L330 190"/><path d="M110 200 L300 200"/><path d="M340 200 L420 200"/>
+  </g>
+</svg>

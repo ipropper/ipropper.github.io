@@ -10,21 +10,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<noscript><style>.topnav .tab{display:none}#panel-mysteries{display:block}</style></noscript>
+<noscript><style>.topnav .tab{display:none}#head-mysteries,#panel-mysteries{display:block}</style></noscript>
 </head>
 <body>
 <nav class="topnav" aria-label="Sections">
   <a class="nav-brand" href="./" aria-label="Traitors"><img class="nav-logo" src="logo.svg" alt=""></a>
   <div class="nav-links" role="tablist">
-    <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="panel-itinerary">Itinerary</button>
-    <button class="tab" type="button" id="tab-mysteries" role="tab" aria-selected="false" aria-controls="panel-mysteries">Mysteries</button>
+    <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="head-invite panel-itinerary">Itinerary</button>
+    <button class="tab" type="button" id="tab-mysteries" role="tab" aria-selected="false" aria-controls="head-mysteries panel-mysteries">Mysteries</button>
   </div>
 </nav>
 <main class="brief home">
-  <img class="logo" src="logo.svg" alt="Traitors">
-  <p class="lead-in">You are invited to</p>
-  <h1>Traitors</h1>
-  <p class="subtitle">A Jack &amp; Jill Party hosted by Ian and Susie</p>
+  <header id="head-invite">
+    <img class="logo" src="logo.svg" alt="Traitors">
+    <p class="lead-in">You are invited to</p>
+    <h1>Traitors</h1>
+    <p class="subtitle">A Jack &amp; Jill Party hosted by Ian and Susie</p>
+  </header>
+
+  <header id="head-mysteries" class="head-mysteries" hidden>
+    <img class="hero" src="images/hero-mysteries.svg" alt="">
+    <h1>Mysteries</h1>
+    <p class="subtitle">Strange reportings across the property. Of people disappearing?</p>
+  </header>
 
   <section class="panel itinerary" id="panel-itinerary" role="tabpanel" aria-labelledby="tab-itinerary">
     <h2>Day 1 <span class="date">Fri Sept 25</span></h2>

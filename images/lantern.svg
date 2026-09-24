@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A lantern">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M92 96 L148 96 L158 174 L82 174Z"/>
+  <path d="M100 96 L100 78 A20 20 0 0 1 140 78 L140 96"/>
+  <path d="M120 122 L120 148"/>
+</g>
+</svg>

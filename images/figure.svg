@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A standing figure">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <circle cx="120" cy="80" r="20"/>
+  <path d="M120 100 L120 156"/>
+  <path d="M120 116 L88 140"/>
+  <path d="M120 116 L152 140"/>
+  <path d="M120 156 L98 190"/>
+  <path d="M120 156 L142 190"/>
+</g>
+</svg>

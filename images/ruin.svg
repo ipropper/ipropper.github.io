@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A ruined building">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M74 176 L74 96 L96 78 L118 98 L140 74 L162 94 L166 176"/>
+  <path d="M104 176 L104 136 L136 136 L136 176"/>
+</g>
+</svg>

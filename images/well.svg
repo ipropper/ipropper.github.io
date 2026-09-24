@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A stone well">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M72 176 L72 124 L168 124 L168 176Z"/>
+  <path d="M60 124 L120 76 L180 124"/>
+  <path d="M120 76 L120 60"/>
+</g>
+</svg>

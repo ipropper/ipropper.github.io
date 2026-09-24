@@ -1,86 +1,86 @@
-// Mysteries. Each entry is a short post with an image and a status.
+// Mysteries. Each entry is a report with an image and a status.
 //
 // To mark one solved, change status to "solved" and add a `solution` line.
-// Solved mysteries drop below the unsolved ones automatically.
+// Solved ones drop below the unsolved automatically.
 var MYSTERIES = [
   {
-    title: "The Chair by the Door",
-    meta: "Attributed to the third weekend",
-    image: "images/chair.svg",
+    title: "The guard house?",
+    meta: "Eastern road",
+    image: "images/ruin.svg",
     status: "unsolved",
     body: [
-      "Three years running, the Faithful who sat with their back to the door at Friday dinner was the first one murdered. Nobody has ever explained it. The Traitors of those years all denied choosing on that basis, and all three denied it a little too quickly.",
-      "The chair is still at the table. It is not marked. Guests are advised to arrive early and count the doors."
+      "If you follow the eastern road there&rsquo;s a loan ruined guard house. I tried to get a closer look, but my piece of shit flashlight died. Couldn&rsquo;t see dick, but kept hearing a weird clicking?",
+      "Asked the owner, course he doesn&rsquo;t know shit. Says it showed up last week. LAST WEEK? It&rsquo;s 100 years old! People can be so dense. Miraculously my flashlight started working again today. Think I&rsquo;ll check it out tonight&hellip;.."
     ]
   },
   {
-    title: "The Clock That Runs Fast",
-    meta: "Kitchen lore",
-    image: "images/clock.svg",
+    title: "That well is not dry",
+    meta: "Past the north hedge",
+    image: "images/well.svg",
     status: "unsolved",
     body: [
-      "The kitchen clock runs four minutes fast. It has run four minutes fast for as long as anyone has cooked in this house, and nobody will admit to setting it.",
-      "The received wisdom is that a Traitor did it in an early year, to make a rival late to a challenge. The rival was late. The rival was also murdered that night, so the experiment is considered inconclusive."
+      "Owner swears the well&rsquo;s been dry since the seventies. Dropped a stone in Friday and counted four seconds. FOUR. That&rsquo;s not dry, that&rsquo;s deep.",
+      "Threw a second one in to be sure and heard absolutely nothing. Not a splash, not a knock, nothing. So either it filled up between Tuesday and Friday or something down there caught it. I know which one I think."
     ]
   },
   {
-    title: "The Rule of Three Denials",
-    meta: "A superstition, widely held",
-    image: "images/tally.svg",
+    title: "Somebody is in the boathouse",
+    meta: "Reported four nights running",
+    image: "images/lantern.svg",
     status: "unsolved",
     body: [
-      "Say &ldquo;I am definitely Faithful&rdquo; once and you will be believed. Say it twice and you will be watched. Say it three times and the room will decide without you.",
-      "No Faithful has ever needed to say it more than once. This is offered as evidence, though it proves nothing."
+      "There&rsquo;s a light in the boathouse most nights around one. Not a lamp left on &mdash; it moves. Goes window to window, slow, like somebody looking for something they already know isn&rsquo;t there.",
+      "Asked at brunch and every single person said they were asleep. Every one. Fine, people lie, that&rsquo;s the whole weekend. But the boathouse is padlocked from the OUTSIDE. I checked. Twice."
     ]
   },
   {
-    title: "The Silent Winner",
-    meta: "The weekend nobody talks about",
-    image: "images/silence.svg",
+    title: "Eleven coats",
+    meta: "Front hall, Friday",
+    image: "images/coats.svg",
     status: "unsolved",
     body: [
-      "A guest once won the whole weekend without speaking after Saturday brunch. She answered questions with a nod or a shrug, and cast her votes in writing.",
-      "Afterwards not one person at that table could recall a single thing she had said. Three swore she had accused them. She had not."
+      "Ten of us came up on Friday. I hung mine last and counted eleven coats on the rail. Counted again. Eleven. Counted a third time because by then I was annoyed about it. Eleven.",
+      "Went back after dinner and there were ten. Nobody left. Nobody drove anywhere. I am not saying anything, I am simply reporting that for about two hours this house had one more coat in it than it had people."
     ]
   },
   {
-    title: "The Year the Traitors Turned",
-    meta: "Recorded, then disputed",
-    image: "images/crossed.svg",
+    title: "The door at the top",
+    meta: "Second floor landing",
+    image: "images/stairs.svg",
     status: "unsolved",
     body: [
-      "One year the two Traitors murdered each other on the same night, each convinced the other was Faithful and closing in.",
-      "The Faithful never noticed. They convened at brunch, deliberated for ninety minutes, and voted out an innocent man. The game had been over since midnight."
+      "House sleeps ten. Ten bedrooms. Go upstairs and count the doors on the landing and you get eleven, and one of them does not open. Not locked &mdash; there&rsquo;s no keyhole. It just doesn&rsquo;t.",
+      "Owner says it&rsquo;s a cupboard. It is not a cupboard. You can hear the floor on the other side take somebody&rsquo;s weight when you stand close enough."
     ]
   },
   {
-    title: "On Washing Up",
-    meta: "Practical advice",
-    image: "images/washing.svg",
-    status: "unsolved",
-    body: [
-      "Whoever volunteers to wash up is buying something. Time at the sink is time out of the room, and time out of the room is an alibi nobody thinks to question.",
-      "Let them. Then ask who suggested it."
-    ]
-  },
-  {
-    title: "On Plating",
-    meta: "From the judges&rsquo; table",
-    image: "images/plating.svg",
-    status: "unsolved",
-    body: [
-      "No dessert has ever won a round on flavour alone. The record is unambiguous: the plate that looked like it meant something has beaten the plate that tasted better, every single time.",
-      "Cook accordingly."
-    ]
-  },
-  {
-    title: "The Last to Arrive",
-    meta: "A reliable error",
+    title: "The cellar door will not stay shut",
+    meta: "Kitchen stairs",
     image: "images/door.svg",
     status: "unsolved",
     body: [
-      "The last guest through the door is the first to be suspected. This has been true every year without exception.",
-      "It has also been wrong every year without exception. Both facts are well known. Neither has ever changed a single vote."
+      "Shut it, latched it, wedged a chair under the handle because I am not an idiot. Came back in twenty minutes and it was standing open and the chair was against the wall. Neatly. Against the wall.",
+      "A draught doesn&rsquo;t move a chair and put it away tidy. I&rsquo;d like that on the record before anyone tells me it was the wind."
+    ]
+  },
+  {
+    title: "Nobody hired the caretaker",
+    meta: "Seen from the kitchen window",
+    image: "images/figure.svg",
+    status: "unsolved",
+    body: [
+      "Man in the far field both mornings, just standing, facing the house. Waved on Saturday. He waved back, which honestly made it worse.",
+      "Owner says there&rsquo;s no caretaker and hasn&rsquo;t been one for years. So who is he waving at? I was at the window. He was waving at me."
+    ]
+  },
+  {
+    title: "The clicking again",
+    meta: "Throughout the property, after midnight",
+    image: "images/clock.svg",
+    status: "unsolved",
+    body: [
+      "Same clicking as the guard house, only now it&rsquo;s in the house. Kitchen first, then the hall, then outside my door around two. Regular. Like something counting.",
+      "Timed it against my watch: four clicks, gap, four clicks. Four again. I don&rsquo;t love that it&rsquo;s four, given the well. Probably nothing. Sleeping with the light on regardless."
     ]
   }
 ];
@@ -89,28 +89,31 @@ var MYSTERIES = [
   var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
   var list = document.getElementById('mysteries');
 
+  // a tab controls its header and its panel, so aria-controls carries both ids
+  function targets(tab) {
+    return (tab.getAttribute('aria-controls') || '').split(/\s+/)
+      .map(function (id) { return document.getElementById(id); })
+      .filter(Boolean);
+  }
+
   tabs.forEach(function (tab) {
-    var panel = document.getElementById(tab.getAttribute('aria-controls'));
-    if (!panel) return;
-    panel.hidden = tab.getAttribute('aria-selected') !== 'true';
+    var on = tab.getAttribute('aria-selected') === 'true';
+    targets(tab).forEach(function (el) { el.hidden = !on; });
     tab.addEventListener('click', function () {
       tabs.forEach(function (t) {
-        var p = document.getElementById(t.getAttribute('aria-controls'));
-        if (!p) return;
-        var on = t === tab;
-        t.setAttribute('aria-selected', String(on));
-        p.hidden = !on;
+        var sel = t === tab;
+        t.setAttribute('aria-selected', String(sel));
+        targets(t).forEach(function (el) { el.hidden = !sel; });
       });
+      window.scrollTo(0, 0);
     });
   });
 
   if (!list) return;
 
-  // unsolved first; within each group, the order written above is kept
+  // unsolved first; within each group the order written above is kept
   var ordered = MYSTERIES.slice().sort(function (a, b) {
-    var av = a.status === 'solved' ? 1 : 0;
-    var bv = b.status === 'solved' ? 1 : 0;
-    return av - bv;
+    return (a.status === 'solved' ? 1 : 0) - (b.status === 'solved' ? 1 : 0);
   });
 
   var html = '';
