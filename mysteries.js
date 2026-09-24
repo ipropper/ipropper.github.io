@@ -36,15 +36,12 @@ var MYSTERIES = [
     ]
   },
   {
-    title: "The Barn",
+    title: "The Stable",
     meta: "Sat, Sept 26 &middot; 2:40 PM",
     image: "images/barn.svg",
     status: "unsolved",
     body: [
-      "Followed one of the X&rsquo;s from the map out to the barn on the west side. Doors are chained, but the chain is just looped through, not locked. Which is basically an invitation, so I took it.",
-      "Nobody&rsquo;s kept animals here in decades, allegedly. So explain the fresh hay. Explain the stalls swept clean. Every stall door is latched from the INSIDE, which I did not know was something you could do from the inside.",
-      "Back wall is covered in scratches. Hundreds of them, in bunches of four with a fifth struck through, the way you count days. Gave up around three hundred. That same little symbol from the map is carved at the bottom, and underneath it somebody&rsquo;s scratched a name. Mine. Obviously. Starting to feel like a theme.",
-      "Heard the clicking again on the way out, louder in here than at the guard house. Coming from the loft, I think. Someone has taken the ladder."
+      "Found an abandoned stable in the fields, back wall was covered in scratches. Of course my name was scratched back there too, the name trick wasn&rsquo;t as scary the second time, but I appreciated the effort."
     ]
   },
   {
@@ -53,7 +50,7 @@ var MYSTERIES = [
     image: "images/sigil.svg",
     status: "unsolved",
     body: [
-      "I took the basement tour, but it was pretty lame. They said I&rsquo;d learn about the man who built the Red Rose Inn, who planned an artists&rsquo; colony here and died before it ever happened. Instead, it was mostly a guy dressed as the grim reaper doing a super fake Elizabeth Holmes voice. He lost his voice halfway through, and that&rsquo;s when I left.",
+      "I took the basement tour, but it was pretty lame. It was mostly a guy dressed as the grim reaper doing a super fake Elizabeth Holmes voice. He lost his voice halfway through, and that&rsquo;s when I left.",
       "On the way out, I noticed a path sectioned off deeper in. So of course I skipped the barrier. Ha! I was looking for something creepy, and I was not disappointed. The basement felt endless. It took me almost 10 minutes to reach the final room. Chamber. I&rsquo;m calling it a chamber.",
       "It&rsquo;s covered in symbols, the same one from the map, everywhere. Dried rose petals all over the floor, and a lockbox in the middle. I tried it a few times but couldn&rsquo;t crack it, so I decided to high-tail it out of there. The place just made me feel uneasy, like I was being watched, ya know?"
     ]
