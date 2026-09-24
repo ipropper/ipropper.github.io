@@ -23,7 +23,7 @@ var MYSTERIES = [
     body: [
       "Love the creepy vibe here. Found an old tome in the library, and the first page I opened to said:",
       { quote: "I grasped his throat to silence him, and in a moment he lay dead at my feet. I gazed on my victim, and my heart swelled with exultation and hellish triumph; clapping my hands, I exclaimed, &lsquo;I too can create desolation; my enemy is not invulnerable; this death will carry despair to him, and a thousand other miseries shall torment and destroy him.&rsquo;" },
-      "Opened a few more. Blank, or said similar things. Then I found the old inn&rsquo;s guest book with a pressed red rose between the pages. My signature is in it. Dated 1901. Probably some kind of prank? Weird one, though."
+      "Opened a few more. Blank, or said similar things. Pretty weird right?"
     ]
   },
   {
