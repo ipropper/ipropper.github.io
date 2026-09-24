@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A plate set with a knife and fork">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <circle cx="120" cy="120" r="50"/>
+  <path d="M46 66 L46 174"/>
+  <path d="M194 66 L194 174"/>
+</g>
+</svg>

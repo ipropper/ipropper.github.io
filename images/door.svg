@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A door standing ajar">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M92 52 L164 52 L164 190 L92 190"/>
+  <path d="M92 52 L52 74 L52 212 L92 190Z"/>
+  <circle cx="80" cy="132" r="5" fill="#121212" stroke="none"/>
+</g>
+</svg>

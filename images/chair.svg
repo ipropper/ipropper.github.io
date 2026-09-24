@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="An empty chair">
+<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M78 104 A44 44 0 0 1 162 104"/>
+  <rect x="86" y="118" width="68" height="54" rx="12"/>
+</g>
+</svg>

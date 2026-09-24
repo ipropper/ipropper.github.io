@@ -178,18 +178,26 @@ h2{
   color:var(--grey);
   text-wrap:balance;
 }
-/* top-level nav: a black bar carrying red link buttons */
+/* top-level nav: black bar, white links, mark at the left */
 .topnav{
   position:relative;
   z-index:1;
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
   align-items:center;
-  gap:.5rem;
-  padding:.8rem 1rem;
+  justify-content:space-between;
+  gap:.5rem 1rem;
+  padding:.7rem 1.1rem;
   background:var(--ink);
 }
+.nav-brand{display:flex;align-items:center;line-height:0}
+.nav-logo{
+  width:2.1rem;
+  height:auto;
+  /* the mark is black line art; inverted it reads white on the bar */
+  filter:invert(1);
+}
+.nav-links{display:flex;flex-wrap:wrap;gap:.5rem}
 .tab{
   font:inherit;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
@@ -197,19 +205,18 @@ h2{
   font-weight:700;
   letter-spacing:.14em;
   text-transform:uppercase;
-  /* the brighter red: #A50F17 is too close to black to read on the bar */
-  color:var(--blood-bright);
+  color:var(--paper);
   background:none;
-  border:1px solid var(--blood-bright);
+  border:1px solid rgba(244,241,236,.55);
   border-radius:999px;
   padding:.5rem 1.05rem;
   cursor:pointer;
 }
-.tab:hover{background:rgba(196,18,27,.2);color:#E4545B}
+.tab:hover{background:rgba(244,241,236,.14);border-color:var(--paper)}
 .tab[aria-selected="true"]{
-  background:var(--blood-bright);
-  border-color:var(--blood-bright);
-  color:var(--paper);
+  background:var(--paper);
+  border-color:var(--paper);
+  color:var(--ink);
 }
 .tab:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
 .panel{
@@ -218,58 +225,64 @@ h2{
   border-top:1px solid var(--ink);
   border-bottom:1px solid var(--ink);
 }
-/* Hearsay + Legends */
-.hearsay{
+.mystery-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:left;
+}
+.mystery{
   display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+  gap:1rem;
+  padding:1.5rem 0;
 }
-.legend{
-  /* held open so a shorter post doesn't jump the button up the page */
-  min-height:19rem;
-  margin:0 0 1.8rem;
+.mystery + .mystery{border-top:1px dotted var(--grey-line)}
+.mystery-img{
+  flex:0 0 auto;
+  width:3.6rem;
+  height:3.6rem;
+  margin-top:.2rem;
 }
-.legend-title{
-  margin:0 0 .3rem;
+.mystery-text{min-width:0}
+.tag{
+  display:inline-block;
+  margin:0 0 .5rem;
+  padding:.2rem .6rem .16rem;
+  border-radius:999px;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.tag-unsolved{background:var(--blood);color:var(--paper)}
+.tag-solved{background:none;border:1px solid var(--grey);color:var(--grey)}
+.mystery-title{
+  margin:0 0 .2rem;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
   font-weight:700;
-  font-size:1.5rem;
-  line-height:1.2;
+  font-size:1.2rem;
+  line-height:1.25;
   color:var(--ink);
-  text-wrap:balance;
 }
-.legend-meta{
-  margin:0 0 1.5rem;
+.mystery-meta{
+  margin:0 0 .8rem;
   font-family:"IM Fell English", "Spectral", Georgia, serif;
   font-style:italic;
-  font-size:.95rem;
+  font-size:.92rem;
   color:var(--grey);
 }
-/* the body reads as a post, so it sets left rather than centred */
-.legend p:not(.legend-meta){
-  margin:0 0 1rem;
-  text-align:left;
-  font-size:1.05rem;
-  line-height:1.65;
+.mystery-text p:not(.mystery-meta):not(.tag){
+  margin:0 0 .8rem;
+  font-size:1rem;
+  line-height:1.6;
   color:var(--ink-soft);
 }
-.legend p:last-child{margin-bottom:0}
-.draw{
-  font:inherit;
-  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
-  font-size:.68rem;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--ink);
-  background:none;
-  border:1px solid var(--ink);
-  border-radius:999px;
-  padding:.6rem 1.3rem;
-  cursor:pointer;
-}
-.draw:hover{background:var(--ink);color:var(--paper)}
+.mystery-text p:last-child{margin-bottom:0}
+.mystery-solution{font-style:italic}
+/* solved ones sink to the bottom and sit back */
+.is-solved{opacity:.62}
+.is-solved .mystery-img{filter:grayscale(1)}
 .itinerary{
   margin:0;
 }
