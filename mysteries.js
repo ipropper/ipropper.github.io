@@ -32,7 +32,7 @@ var MYSTERIES = [
     image: "images/map.svg",
     status: "unsolved",
     body: [
-      "Found a funky treasure map on the way to the restroom. Wondering if it&rsquo;s part of some house scavenger hunt. Most of the X&rsquo;s are in places I&rsquo;ve already been. One&rsquo;s marked under the house. Same little symbol drawn next to every X."
+      "Found a funky treasure map on the way to the restroom. Wondering if it&rsquo;s part of some house scavenger hunt."
     ]
   },
   {
