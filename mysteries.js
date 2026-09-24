@@ -52,16 +52,7 @@ var MYSTERIES = [
     body: [
       "I took the basement tour, but it was pretty lame. It was just a teenager pretending to have a deep devil voice, idk what was worse the impression or the cracking. He lost his voice halfway through, and that&rsquo;s when I left.",
       "On the way out, I noticed a path sectioned off deeper in. So of course I skipped the barrier. Ha! I was looking for something creepy, and I was not disappointed. The basement felt endless. It took me almost 10 minutes to reach the final room. Chamber. I&rsquo;m calling it a chamber.",
-      "It&rsquo;s covered in symbols, the same one from the map, everywhere. Dried rose petals all over the floor, and a lockbox in the middle. I tried it a few times but couldn&rsquo;t crack it, so I decided to high-tail it out of there. The place just made me feel uneasy, like I was being watched, ya know?"
-    ]
-  },
-  {
-    title: "What&rsquo;s That by the Pond?",
-    meta: "Sat, Sept 26 &middot; 6:50 PM",
-    image: "images/fish.svg",
-    status: "unsolved",
-    body: [
-      "Something washed up by the pond while I was walking back for dinner. It&rsquo;s a fish, I think. Too many eyes. They were all looking at me. Caretaker says the pond&rsquo;s &ldquo;always had those.&rdquo;"
+      "There were candles lighting the whole path, and a lockbox in the middle. I tried it a few times but couldn&rsquo;t crack it, so I decided to high-tail it out of there. The place just made me feel uneasy, like I was being watched, ya know?"
     ]
   },
   {
