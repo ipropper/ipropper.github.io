@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<noscript><style>.tabs{display:none}#panel-hearsay{display:block}#draw{display:none}</style></noscript>
 </head>
 <body>
 <main class="brief home">
@@ -18,7 +19,12 @@
   <h1>Traitors</h1>
   <p class="subtitle">A Jack &amp; Jill Party hosted by Ian and Susie</p>
 
-  <section class="itinerary">
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="panel-itinerary">Itinerary</button>
+    <button class="tab" type="button" id="tab-hearsay" role="tab" aria-selected="false" aria-controls="panel-hearsay">Hearsay &plus; Legends</button>
+  </nav>
+
+  <section class="panel itinerary" id="panel-itinerary" role="tabpanel" aria-labelledby="tab-itinerary">
     <h2>Day 1 <span class="date">Fri Sept 25</span></h2>
     <ul class="sched">
       <li><span class="t">7pm&ndash;12am</span> Food, drinks, games</li>
@@ -43,8 +49,14 @@
     </ul>
   </section>
 
+  <section class="panel hearsay" id="panel-hearsay" role="tabpanel" aria-labelledby="tab-hearsay">
+    <p class="excerpt" id="excerpt" aria-live="polite">The first Traitor is always the one who volunteers to pour.</p>
+    <button class="draw" type="button" id="draw">Another</button>
+  </section>
+
   <img class="dagger" src="dagger.svg" alt="">
   <p class="signoff">Good luck, players.</p>
 </main>
+<script src="hearsay.js"></script>
 </body>
 </html>
