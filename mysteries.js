@@ -50,7 +50,7 @@ var MYSTERIES = [
     image: "images/sigil.svg",
     status: "unsolved",
     body: [
-      "I took the basement tour, but it was pretty lame. It was mostly a guy dressed as the grim reaper doing a super fake Elizabeth Holmes voice. He lost his voice halfway through, and that&rsquo;s when I left.",
+      "I took the basement tour, but it was pretty lame. It was just a teenager pretending to have a deep devil voice, idk what was worse the impression or the cracking. He lost his voice halfway through, and that&rsquo;s when I left.",
       "On the way out, I noticed a path sectioned off deeper in. So of course I skipped the barrier. Ha! I was looking for something creepy, and I was not disappointed. The basement felt endless. It took me almost 10 minutes to reach the final room. Chamber. I&rsquo;m calling it a chamber.",
       "It&rsquo;s covered in symbols, the same one from the map, everywhere. Dried rose petals all over the floor, and a lockbox in the middle. I tried it a few times but couldn&rsquo;t crack it, so I decided to high-tail it out of there. The place just made me feel uneasy, like I was being watched, ya know?"
     ]
