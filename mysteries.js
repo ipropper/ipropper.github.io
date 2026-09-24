@@ -61,7 +61,7 @@ var MYSTERIES = [
     image: "images/brick.svg",
     status: "unsolved",
     body: [
-      "I was sitting by the koi when I noticed a loose brick in the wall. I pulled it out and found a small note. In MY handwriting. It just said &ldquo;RUN.&rdquo;"
+      "I was sitting by the koi when I noticed a small note. In MY handwriting. It just said &ldquo;RUN.&rdquo;"
     ]
   },
   {
