@@ -36,6 +36,18 @@ var MYSTERIES = [
     ]
   },
   {
+    title: "The Barn",
+    meta: "Sat, Sept 26 &middot; 2:40 PM",
+    image: "images/barn.svg",
+    status: "unsolved",
+    body: [
+      "Followed one of the X&rsquo;s from the map out to the barn on the west side. Doors are chained, but the chain is just looped through, not locked. Which is basically an invitation, so I took it.",
+      "Nobody&rsquo;s kept animals here in decades, allegedly. So explain the fresh hay. Explain the stalls swept clean. Every stall door is latched from the INSIDE, which I did not know was something you could do from the inside.",
+      "Back wall is covered in scratches. Hundreds of them, in bunches of four with a fifth struck through, the way you count days. Gave up around three hundred. That same little symbol from the map is carved at the bottom, and underneath it somebody&rsquo;s scratched a name. Mine. Obviously. Starting to feel like a theme.",
+      "Heard the clicking again on the way out, louder in here than at the guard house. Coming from the loft, I think. Someone has taken the ladder."
+    ]
+  },
+  {
     title: "Basement Symbols",
     meta: "Sat, Sept 26 &middot; 4:30 PM",
     image: "images/sigil.svg",
@@ -70,7 +82,7 @@ var MYSTERIES = [
     image: "images/shoe.svg",
     status: "unsolved",
     body: [
-      "Came back to my room and one of my shoes is gone. The caretaker insists there&rsquo;s only ever been one. Pretty fucking sure I came with a pair. It looks like this, but the other half. Let me know if you find it."
+      "Came back to my room and one of my shoes is gone. The caretaker insists there&rsquo;s only ever been one. Pretty fucking sure I came with a pair."
     ]
   },
   {

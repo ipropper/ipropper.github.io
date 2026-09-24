@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A barn with its doors braced shut">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M46 112 L74 80 L120 62 L166 80 L194 112"/>
+  <path d="M56 112 L56 178 L184 178 L184 112"/>
+  <rect x="98" y="130" width="44" height="48"/>
+  <path d="M98 130 L142 178 M142 130 L98 178"/>
+  <rect x="108" y="86" width="24" height="20"/>
+</g>
+</svg>
