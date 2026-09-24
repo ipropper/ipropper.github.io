@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="An open book">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M120 84 C100 68 74 66 52 72 L52 168 C74 162 100 164 120 180"/>
+  <path d="M120 84 C140 68 166 66 188 72 L188 168 C166 162 140 164 120 180"/>
+  <path d="M120 84 L120 180"/>
+</g>
+</svg>

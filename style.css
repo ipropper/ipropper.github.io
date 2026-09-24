@@ -237,64 +237,128 @@ h2{
   margin-bottom:.3em;
 }
 .head-mysteries .subtitle{margin-bottom:0}
-.mystery-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  text-align:left;
-}
-.mystery{
+/* the Mysteries tab reads as a blog: left-set, with a byline and a feed */
+.mysteries{text-align:left}
+.post-lead{padding-bottom:.5rem}
+.post-list{list-style:none;margin:0;padding:0}
+.post{padding:2rem 0;border-top:1px solid var(--grey-line)}
+.post-head{
   display:flex;
-  gap:1rem;
-  padding:1.5rem 0;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.5rem .8rem;
+  margin-bottom:.45rem;
 }
-.mystery + .mystery{border-top:1px dotted var(--grey-line)}
-.mystery-img{
-  flex:0 0 auto;
-  width:3.6rem;
-  height:3.6rem;
-  margin-top:.2rem;
+.post-meta{
+  margin:0;
+  font-family:"Spectral", Georgia, serif;
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--grey);
 }
-.mystery-text{min-width:0}
+.post-title{
+  margin:0 0 .9rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-weight:700;
+  font-size:1.45rem;
+  line-height:1.2;
+  color:var(--ink);
+  text-wrap:balance;
+}
+.post-lead .post-title{font-size:1.75rem;margin-bottom:1rem}
+.byline{display:flex;align-items:center;gap:.7rem;margin:0 0 1.3rem}
+.byline-avatar{
+  width:2.6rem;
+  height:2.6rem;
+  border-radius:50%;
+  border:1px solid var(--grey-line);
+  padding:.25rem;
+  background:var(--paper);
+}
+.byline-name{
+  margin:0;
+  font-weight:600;
+  font-size:.98rem;
+  color:var(--ink);
+}
+.byline-meta{
+  margin:0;
+  font-size:.85rem;
+  color:var(--grey);
+}
+.post-img{
+  display:block;
+  width:100%;
+  aspect-ratio:3 / 2;
+  object-fit:contain;
+  margin:0 0 1.1rem;
+  background:var(--paper-deep);
+  border:1px solid var(--ink);
+}
+.post p{
+  margin:0 0 1rem;
+  font-size:1.02rem;
+  line-height:1.65;
+  color:var(--ink-soft);
+}
+.post p:last-child{margin-bottom:0}
+.post blockquote{
+  margin:0 0 1rem;
+  padding:.2rem 0 .2rem 1.1rem;
+  border-left:3px solid var(--blood);
+  font-style:italic;
+  font-size:1rem;
+  line-height:1.6;
+  color:var(--ink);
+}
+.post-solution{font-style:italic}
 .tag{
   display:inline-block;
-  margin:0 0 .5rem;
   padding:.2rem .6rem .16rem;
   border-radius:999px;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
-  font-size:.58rem;
+  font-size:.56rem;
   font-weight:700;
   letter-spacing:.16em;
   text-transform:uppercase;
 }
 .tag-unsolved{background:var(--blood);color:var(--paper)}
 .tag-solved{background:none;border:1px solid var(--grey);color:var(--grey)}
-.mystery-title{
+/* solved posts sink to the bottom of the feed and sit back */
+.is-solved{opacity:.62}
+.is-solved .post-img{filter:grayscale(1)}
+.verdict{
+  margin-top:2.2rem;
+  padding-top:1.6rem;
+  border-top:1px solid var(--ink);
+  text-align:center;
+}
+.verdict-label{
   margin:0 0 .2rem;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.66rem;
   font-weight:700;
-  font-size:1.2rem;
-  line-height:1.25;
-  color:var(--ink);
-}
-.mystery-meta{
-  margin:0 0 .8rem;
-  font-family:"IM Fell English", "Spectral", Georgia, serif;
-  font-style:italic;
-  font-size:.92rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
   color:var(--grey);
 }
-.mystery-text p:not(.mystery-meta):not(.tag){
-  margin:0 0 .8rem;
-  font-size:1rem;
-  line-height:1.6;
-  color:var(--ink-soft);
+.verdict-score{
+  margin:0;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-weight:700;
+  font-size:3.4rem;
+  line-height:1;
+  color:var(--blood);
 }
-.mystery-text p:last-child{margin-bottom:0}
-.mystery-solution{font-style:italic}
-/* solved ones sink to the bottom and sit back */
-.is-solved{opacity:.62}
-.is-solved .mystery-img{filter:grayscale(1)}
+.verdict-score span{font-size:1.5rem;color:var(--grey)}
+.verdict-line{
+  margin:.35rem 0 0;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:1rem;
+  letter-spacing:.06em;
+  color:var(--ink);
+}
 .itinerary{
   margin:0;
 }

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A staircase">
-<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="120" cy="120" r="104"/>
-  <path d="M56 180 L56 148 L98 148 L98 116 L140 116 L140 84 L184 84"/>
-  <path d="M56 180 L184 180"/>
-</g>
-</svg>

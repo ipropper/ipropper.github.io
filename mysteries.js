@@ -1,86 +1,87 @@
-// Mysteries. Each entry is a report with an image and a status.
+// The Red Rose Farm posts.
 //
-// To mark one solved, change status to "solved" and add a `solution` line.
-// Solved ones drop below the unsolved automatically.
+// Each entry is one dated post. `body` takes strings for paragraphs and
+// {quote: "..."} for a pulled quote. To mark one solved, set
+// status: "solved" and optionally add a `solution` line — solved posts
+// drop below the unsolved ones.
 var MYSTERIES = [
   {
-    title: "The guard house?",
-    meta: "Eastern road",
+    title: "Guard House",
+    meta: "Fri, Sept 25 &middot; 7:02 PM",
     image: "images/ruin.svg",
     status: "unsolved",
     body: [
-      "If you follow the eastern road there&rsquo;s a loan ruined guard house. I tried to get a closer look, but my piece of shit flashlight died. Couldn&rsquo;t see dick, but kept hearing a weird clicking?",
-      "Asked the owner, course he doesn&rsquo;t know shit. Says it showed up last week. LAST WEEK? It&rsquo;s 100 years old! People can be so dense. Miraculously my flashlight started working again today. Think I&rsquo;ll check it out tonight&hellip;.."
+      "If you follow the eastern road there&rsquo;s a lone ruined guard house. Went to check it out, but my piece of shit flashlight died. Couldn&rsquo;t see anything, though I heard a weird clicking?",
+      "Asked the caretaker, and of course he &ldquo;doesn&rsquo;t know.&rdquo; Says it showed up last week. LAST WEEK? It&rsquo;s 100 years old! This place is hilarious."
     ]
   },
   {
-    title: "That well is not dry",
-    meta: "Past the north hedge",
-    image: "images/well.svg",
+    title: "Creepy Books",
+    meta: "Sat, Sept 26 &middot; 10:40 AM",
+    image: "images/book.svg",
     status: "unsolved",
     body: [
-      "Owner swears the well&rsquo;s been dry since the seventies. Dropped a stone in Friday and counted four seconds. FOUR. That&rsquo;s not dry, that&rsquo;s deep.",
-      "Threw a second one in to be sure and heard absolutely nothing. Not a splash, not a knock, nothing. So either it filled up between Tuesday and Friday or something down there caught it. I know which one I think."
+      "Love the creepy vibe here. Found an old tome in the library, and the first page I opened to said:",
+      { quote: "I grasped his throat to silence him, and in a moment he lay dead at my feet. I gazed on my victim, and my heart swelled with exultation and hellish triumph; clapping my hands, I exclaimed, &lsquo;I too can create desolation; my enemy is not invulnerable; this death will carry despair to him, and a thousand other miseries shall torment and destroy him.&rsquo;" },
+      "Opened a few more. Blank, or said similar things. Then I found the old inn&rsquo;s guest book with a pressed red rose between the pages. My signature is in it. Dated 1901. Probably some kind of prank? Weird one, though."
     ]
   },
   {
-    title: "Somebody is in the boathouse",
-    meta: "Reported four nights running",
-    image: "images/lantern.svg",
+    title: "Treasure Map",
+    meta: "Sat, Sept 26 &middot; 1:05 PM",
+    image: "images/map.svg",
     status: "unsolved",
     body: [
-      "There&rsquo;s a light in the boathouse most nights around one. Not a lamp left on &mdash; it moves. Goes window to window, slow, like somebody looking for something they already know isn&rsquo;t there.",
-      "Asked at brunch and every single person said they were asleep. Every one. Fine, people lie, that&rsquo;s the whole weekend. But the boathouse is padlocked from the OUTSIDE. I checked. Twice."
+      "Found a funky treasure map on the way to the restroom. Wondering if it&rsquo;s part of some house scavenger hunt. Most of the X&rsquo;s are in places I&rsquo;ve already been. One&rsquo;s marked under the house. Same little symbol drawn next to every X."
     ]
   },
   {
-    title: "Eleven coats",
-    meta: "Front hall, Friday",
-    image: "images/coats.svg",
+    title: "Basement Symbols",
+    meta: "Sat, Sept 26 &middot; 4:30 PM",
+    image: "images/sigil.svg",
     status: "unsolved",
     body: [
-      "Ten of us came up on Friday. I hung mine last and counted eleven coats on the rail. Counted again. Eleven. Counted a third time because by then I was annoyed about it. Eleven.",
-      "Went back after dinner and there were ten. Nobody left. Nobody drove anywhere. I am not saying anything, I am simply reporting that for about two hours this house had one more coat in it than it had people."
+      "I took the basement tour, but it was pretty lame. They said I&rsquo;d learn about the man who built the Red Rose Inn, who planned an artists&rsquo; colony here and died before it ever happened. Instead, it was mostly a guy dressed as the grim reaper doing a super fake Elizabeth Holmes voice. He lost his voice halfway through, and that&rsquo;s when I left.",
+      "On the way out, I noticed a path sectioned off deeper in. So of course I skipped the barrier. Ha! I was looking for something creepy, and I was not disappointed. The basement felt endless. It took me almost 10 minutes to reach the final room. Chamber. I&rsquo;m calling it a chamber.",
+      "It&rsquo;s covered in symbols, the same one from the map, everywhere. Dried rose petals all over the floor, and a lockbox in the middle. I tried it a few times but couldn&rsquo;t crack it, so I decided to high-tail it out of there. The place just made me feel uneasy, like I was being watched, ya know?"
     ]
   },
   {
-    title: "The door at the top",
-    meta: "Second floor landing",
-    image: "images/stairs.svg",
+    title: "What&rsquo;s That by the Pond?",
+    meta: "Sat, Sept 26 &middot; 6:50 PM",
+    image: "images/fish.svg",
     status: "unsolved",
     body: [
-      "House sleeps ten. Ten bedrooms. Go upstairs and count the doors on the landing and you get eleven, and one of them does not open. Not locked &mdash; there&rsquo;s no keyhole. It just doesn&rsquo;t.",
-      "Owner says it&rsquo;s a cupboard. It is not a cupboard. You can hear the floor on the other side take somebody&rsquo;s weight when you stand close enough."
+      "Something washed up by the pond while I was walking back for dinner. It&rsquo;s a fish, I think. Too many eyes. They were all looking at me. Caretaker says the pond&rsquo;s &ldquo;always had those.&rdquo;"
     ]
   },
   {
-    title: "The cellar door will not stay shut",
-    meta: "Kitchen stairs",
-    image: "images/door.svg",
+    title: "Koi Pond",
+    meta: "Sat, Sept 26 &middot; 9:20 PM",
+    image: "images/brick.svg",
     status: "unsolved",
     body: [
-      "Shut it, latched it, wedged a chair under the handle because I am not an idiot. Came back in twenty minutes and it was standing open and the chair was against the wall. Neatly. Against the wall.",
-      "A draught doesn&rsquo;t move a chair and put it away tidy. I&rsquo;d like that on the record before anyone tells me it was the wind."
+      "I was sitting by the koi when I noticed a loose brick in the wall. I pulled it out and found a small note. In MY handwriting. It just said &ldquo;RUN.&rdquo;"
     ]
   },
   {
-    title: "Nobody hired the caretaker",
-    meta: "Seen from the kitchen window",
-    image: "images/figure.svg",
+    title: "Missing Pair",
+    meta: "Sat, Sept 26 &middot; 11:10 PM",
+    image: "images/shoe.svg",
     status: "unsolved",
     body: [
-      "Man in the far field both mornings, just standing, facing the house. Waved on Saturday. He waved back, which honestly made it worse.",
-      "Owner says there&rsquo;s no caretaker and hasn&rsquo;t been one for years. So who is he waving at? I was at the window. He was waving at me."
+      "Came back to my room and one of my shoes is gone. The caretaker insists there&rsquo;s only ever been one. Pretty fucking sure I came with a pair. It looks like this, but the other half. Let me know if you find it."
     ]
   },
   {
-    title: "The clicking again",
-    meta: "Throughout the property, after midnight",
-    image: "images/clock.svg",
+    title: "Attic",
+    meta: "Sun, Sept 27 &middot; 1:00 AM",
+    image: "images/photos.svg",
     status: "unsolved",
     body: [
-      "Same clicking as the guard house, only now it&rsquo;s in the house. Kitchen first, then the hall, then outside my door around two. Regular. Like something counting.",
-      "Timed it against my watch: four clicks, gap, four clicks. Four again. I don&rsquo;t love that it&rsquo;s four, given the well. Probably nothing. Sleeping with the light on regardless."
+      "Been searching this place damn near all night. Then it hit me: there&rsquo;s one place I haven&rsquo;t looked. The attic. Found a box of photos up there. Me at the guard house. Me in the basement. Me asleep in my room.",
+      "Under the photos was a stack of old illustrations, the kind the artists who lived here in the early 1900s used to draw. They&rsquo;re all of me. The first one is dated 1901.",
+      "Got the fuck out of there."
     ]
   }
 ];
@@ -119,16 +120,21 @@ var MYSTERIES = [
   var html = '';
   ordered.forEach(function (m) {
     var solved = m.status === 'solved';
-    html += '<li class="mystery' + (solved ? ' is-solved' : '') + '">' +
-      '<img class="mystery-img" src="' + m.image + '" alt="">' +
-      '<div class="mystery-text">' +
-        '<p class="tag ' + (solved ? 'tag-solved' : 'tag-unsolved') + '">' +
-          (solved ? 'Solved' : 'Unsolved') + '</p>' +
-        '<h3 class="mystery-title">' + m.title + '</h3>' +
-        '<p class="mystery-meta">' + m.meta + '</p>' +
-        m.body.map(function (b) { return '<p>' + b + '</p>'; }).join('') +
-        (solved && m.solution ? '<p class="mystery-solution">' + m.solution + '</p>' : '') +
-      '</div></li>';
+    var blocks = m.body.map(function (b) {
+      return b && b.quote ? '<blockquote>' + b.quote + '</blockquote>' : '<p>' + b + '</p>';
+    }).join('');
+    html +=
+      '<li class="post' + (solved ? ' is-solved' : '') + '">' +
+        '<div class="post-head">' +
+          '<p class="post-meta">' + m.meta + '</p>' +
+          '<span class="tag ' + (solved ? 'tag-solved' : 'tag-unsolved') + '">' +
+            (solved ? 'Solved' : 'Unsolved') + '</span>' +
+        '</div>' +
+        '<h3 class="post-title">' + m.title + '</h3>' +
+        '<img class="post-img" src="' + m.image + '" alt="" loading="lazy">' +
+        blocks +
+        (solved && m.solution ? '<p class="post-solution">' + m.solution + '</p>' : '') +
+      '</li>';
   });
   list.innerHTML = html;
 })();

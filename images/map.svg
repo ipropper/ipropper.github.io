@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A folded map marked with crosses">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M48 76 L96 92 L144 76 L192 92 L192 164 L144 148 L96 164 L48 148Z"/>
+  <path d="M96 92 L96 164"/><path d="M144 76 L144 148"/>
+  <g stroke-width="6"><path d="M66 108 L80 122"/><path d="M80 108 L66 122"/>
+  <path d="M112 126 L126 140"/><path d="M126 126 L112 140"/>
+  <path d="M160 100 L174 114"/><path d="M174 100 L160 114"/></g>
+</g>
+</svg>

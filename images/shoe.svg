@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A single shoe">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M44 156 L44 112 L86 112 L110 134 L166 140 C190 143 200 150 200 162 L200 170 L52 170 C46 170 44 166 44 160Z"/>
+  <path d="M86 112 L96 132"/><path d="M104 118 L112 136"/>
+</g>
+</svg>

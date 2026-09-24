@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A brick pulled from a wall, with a note behind it">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M40 78 L200 78 M40 120 L200 120 M40 162 L200 162 M40 78 L40 196 M200 78 L200 196 M40 196 L200 196"/>
+  <path d="M96 78 L96 120 M64 120 L64 162 M136 120 L136 162 M112 162 L112 196"/>
+  <rect x="98" y="122" width="72" height="38" fill="#F4F1EC"/>
+  <path d="M110 134 L158 134 M110 148 L142 148" stroke-width="5"/>
+</g>
+</svg>

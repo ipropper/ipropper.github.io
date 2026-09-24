@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Coat hooks on a rail">
-<g fill="none" stroke="#121212" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="120" cy="120" r="104"/>
-  <path d="M48 92 L192 92"/>
-  <path d="M84 92 L84 122 A14 14 0 0 0 112 122"/>
-  <path d="M156 92 L156 122 A14 14 0 0 1 128 122"/>
-  <path d="M120 92 L120 166"/>
-</g>
-</svg>

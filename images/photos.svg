@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A stack of photographs">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <rect x="52" y="70" width="112" height="90" transform="rotate(-7 108 115)"/>
+  <rect x="80" y="88" width="112" height="90" transform="rotate(6 136 133)"/>
+  <g stroke-width="6"><circle cx="122" cy="118" r="12"/><path d="M96 158 L122 134 L142 152"/></g>
+</g>
+</svg>

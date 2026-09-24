@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A fish with too many eyes">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M44 124 C76 84 152 84 182 124 C152 164 76 164 44 124Z"/>
+  <path d="M182 124 L212 98 L212 150Z"/>
+  <g stroke-width="6"><circle cx="86" cy="112" r="8"/><circle cx="116" cy="106" r="7"/>
+  <circle cx="106" cy="134" r="7"/><circle cx="142" cy="120" r="8"/><circle cx="136" cy="146" r="6"/></g>
+</g>
+</svg>
