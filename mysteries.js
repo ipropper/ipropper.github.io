@@ -76,12 +76,10 @@ var MYSTERIES = [
   {
     title: "Attic",
     meta: "Sun, Sept 27 &middot; 1:00 AM",
-    image: "images/photos.svg",
+    image: "images/hatch.svg",
     status: "unsolved",
     body: [
-      "Been searching this place damn near all night. Then it hit me: there&rsquo;s one place I haven&rsquo;t looked. The attic. Found a box of photos up there. Me at the guard house. Me in the basement. Me asleep in my room.",
-      "Under the photos was a stack of old illustrations, the kind the artists who lived here in the early 1900s used to draw. They&rsquo;re all of me. The first one is dated 1901.",
-      "Got the fuck out of there."
+      "Heard there was a missing person&rsquo;s report and this place was combed through, the only place they couldn&rsquo;t get access to was the attic. I wonder what&rsquo;s up there?"
     ]
   }
 ];
