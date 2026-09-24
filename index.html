@@ -10,19 +10,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<noscript><style>.tabs{display:none}#panel-hearsay{display:block}#draw{display:none}</style></noscript>
+<noscript><style>.topnav{display:none}#panel-hearsay{display:block}#draw{display:none}</style></noscript>
 </head>
 <body>
+<nav class="topnav" role="tablist" aria-label="Sections">
+  <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="panel-itinerary">Itinerary</button>
+  <button class="tab" type="button" id="tab-hearsay" role="tab" aria-selected="false" aria-controls="panel-hearsay">Hearsay &plus; Legends</button>
+</nav>
 <main class="brief home">
   <img class="logo" src="logo.svg" alt="Traitors">
   <p class="lead-in">You are invited to</p>
   <h1>Traitors</h1>
   <p class="subtitle">A Jack &amp; Jill Party hosted by Ian and Susie</p>
-
-  <nav class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="panel-itinerary">Itinerary</button>
-    <button class="tab" type="button" id="tab-hearsay" role="tab" aria-selected="false" aria-controls="panel-hearsay">Hearsay &plus; Legends</button>
-  </nav>
 
   <section class="panel itinerary" id="panel-itinerary" role="tabpanel" aria-labelledby="tab-itinerary">
     <h2>Day 1 <span class="date">Fri Sept 25</span></h2>
@@ -50,8 +49,13 @@
   </section>
 
   <section class="panel hearsay" id="panel-hearsay" role="tabpanel" aria-labelledby="tab-hearsay">
-    <p class="excerpt" id="excerpt" aria-live="polite">The first Traitor is always the one who volunteers to pour.</p>
-    <button class="draw" type="button" id="draw">Another</button>
+    <article class="legend" id="legend" aria-live="polite">
+      <h3 class="legend-title">The Chair by the Door</h3>
+      <p class="legend-meta">Attributed to the third weekend</p>
+      <p>Three years running, the Faithful who sat with their back to the door at Friday dinner was the first one murdered. Nobody has ever explained it. The Traitors of those years have all denied choosing on that basis, and all three denied it a little too quickly.</p>
+      <p>The chair is still at the table. It is not marked. Guests are advised to arrive early and count the doors.</p>
+    </article>
+    <button class="draw" type="button" id="draw">Another legend</button>
   </section>
 
   <img class="dagger" src="dagger.svg" alt="">

@@ -178,14 +178,17 @@ h2{
   color:var(--grey);
   text-wrap:balance;
 }
-/* the tab strip, and the panels it switches between */
-.tabs{
+/* top-level nav: a black bar carrying red link buttons */
+.topnav{
+  position:relative;
+  z-index:1;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:0 .2rem;
-  margin:2.2rem 0 0;
-  border-bottom:1px solid var(--ink);
+  align-items:center;
+  gap:.5rem;
+  padding:.8rem 1rem;
+  background:var(--ink);
 }
 .tab{
   font:inherit;
@@ -194,19 +197,25 @@ h2{
   font-weight:700;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--grey);
+  /* the brighter red: #A50F17 is too close to black to read on the bar */
+  color:var(--blood-bright);
   background:none;
-  border:0;
-  border-bottom:2px solid transparent;
-  margin-bottom:-1px;
-  padding:.7rem .55rem .55rem;
+  border:1px solid var(--blood-bright);
+  border-radius:999px;
+  padding:.5rem 1.05rem;
   cursor:pointer;
 }
-.tab:hover{color:var(--ink)}
-.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--blood)}
+.tab:hover{background:rgba(196,18,27,.2);color:#E4545B}
+.tab[aria-selected="true"]{
+  background:var(--blood-bright);
+  border-color:var(--blood-bright);
+  color:var(--paper);
+}
+.tab:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
 .panel{
-  margin:0 0 2.2rem;
+  margin:2.2rem 0;
   padding:1.7rem 0 1.5rem;
+  border-top:1px solid var(--ink);
   border-bottom:1px solid var(--ink);
 }
 /* Hearsay + Legends */
@@ -216,18 +225,36 @@ h2{
   align-items:center;
   justify-content:center;
 }
-.excerpt{
-  display:flex;
-  align-items:center;
-  /* held open so drawing a shorter line doesn't jump the page */
-  min-height:8.5rem;
-  margin:0 0 1.4rem;
-  font-style:italic;
-  font-size:1.25rem;
-  line-height:1.5;
+.legend{
+  /* held open so a shorter post doesn't jump the button up the page */
+  min-height:19rem;
+  margin:0 0 1.8rem;
+}
+.legend-title{
+  margin:0 0 .3rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-weight:700;
+  font-size:1.5rem;
+  line-height:1.2;
   color:var(--ink);
   text-wrap:balance;
 }
+.legend-meta{
+  margin:0 0 1.5rem;
+  font-family:"IM Fell English", "Spectral", Georgia, serif;
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--grey);
+}
+/* the body reads as a post, so it sets left rather than centred */
+.legend p:not(.legend-meta){
+  margin:0 0 1rem;
+  text-align:left;
+  font-size:1.05rem;
+  line-height:1.65;
+  color:var(--ink-soft);
+}
+.legend p:last-child{margin-bottom:0}
 .draw{
   font:inherit;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
