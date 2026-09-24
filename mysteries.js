@@ -41,13 +41,13 @@ var MYSTERIES = [
     image: "images/barn.svg",
     status: "unsolved",
     body: [
-      "Found an abandoned stable in the fields, back wall was covered in scratches. Of course my name was scratched back there too, the name trick wasn&rsquo;t as scary the second time, but I appreciated the effort."
+      "Found an abandoned stable, caretaker says this property&rsquo;s never had horses&hellip; so idk what it&rsquo;s doing here."
     ]
   },
   {
     title: "Basement Symbols",
     meta: "Sat, Sept 26 &middot; 4:30 PM",
-    image: "images/sigil.svg",
+    image: "images/lockbox.svg",
     status: "unsolved",
     body: [
       "I took the basement tour, but it was pretty lame. It was just a teenager pretending to have a deep devil voice, idk what was worse the impression or the cracking. He lost his voice halfway through, and that&rsquo;s when I left.",
@@ -58,7 +58,7 @@ var MYSTERIES = [
   {
     title: "Koi Pond",
     meta: "Sat, Sept 26 &middot; 9:20 PM",
-    image: "images/brick.svg",
+    image: "images/note.svg",
     status: "unsolved",
     body: [
       "I was sitting by the koi when I noticed a small note. In MY handwriting. It just said &ldquo;RUN.&rdquo;"

@@ -307,37 +307,6 @@ h2{
 /* solved posts sink to the bottom of the feed and sit back */
 .is-solved{opacity:.62}
 .is-solved .post-img{filter:grayscale(1)}
-.verdict{
-  margin-top:2.2rem;
-  padding-top:1.6rem;
-  border-top:1px solid var(--ink);
-  text-align:center;
-}
-.verdict-label{
-  margin:0 0 .2rem;
-  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
-  font-size:.66rem;
-  font-weight:700;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--grey);
-}
-.verdict-score{
-  margin:0;
-  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
-  font-weight:700;
-  font-size:3.4rem;
-  line-height:1;
-  color:var(--blood);
-}
-.verdict-score span{font-size:1.5rem;color:var(--grey)}
-.verdict-line{
-  margin:.35rem 0 0;
-  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
-  font-size:1rem;
-  letter-spacing:.06em;
-  color:var(--ink);
-}
 .itinerary{
   margin:0;
 }

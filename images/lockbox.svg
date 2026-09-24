@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A padlocked box between two lit candles">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M44 180 L196 180"/>
+  <rect x="74" y="124" width="92" height="56"/>
+  <path d="M74 142 L166 142"/>
+  <rect x="106" y="148" width="28" height="22"/>
+  <path d="M112 148 L112 141 A8 8 0 0 1 128 141 L128 148"/>
+  <path d="M46 180 L46 132 L58 132 L58 180"/>
+  <path d="M52 106 C61 117 59 128 52 128 C45 128 43 117 52 106Z" stroke-width="5"/>
+  <path d="M182 180 L182 132 L194 132 L194 180"/>
+  <path d="M188 106 C197 117 195 128 188 128 C181 128 179 117 188 106Z" stroke-width="5"/>
+</g>
+</svg>

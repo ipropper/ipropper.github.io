@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="A handwritten note beside rippling water">
+<g fill="none" stroke="#121212" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="120" cy="120" r="104"/>
+  <path d="M72 62 L144 62 L168 86 L168 150 L72 150Z"/>
+  <path d="M144 62 L144 86 L168 86"/>
+  <path d="M90 108 L150 108 M90 126 L132 126" stroke-width="5"/>
+  <path d="M52 172 C70 164 86 180 104 172 C122 164 138 180 156 172 C168 166 179 174 188 171" stroke-width="5"/>
+  <path d="M62 196 C80 188 96 204 114 196 C132 188 148 204 166 196" stroke-width="5"/>
+</g>
+</svg>
