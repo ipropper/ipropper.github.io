@@ -13,7 +13,15 @@ var ARTIFACTS = [
       "artifacts/dubonnet-source.jpg"
     ]
   },
-  { title: "Moonmad", images: [] },
+  {
+    title: "Moonmad",
+    images: [
+      "artifacts/moonmad-1.jpg",
+      "artifacts/moonmad-2.jpg",
+      "artifacts/moonmad-3.jpg",
+      "artifacts/moonmad-source.jpg"
+    ]
+  },
   { title: "The Merry Jesters", images: [] },
   {
     title: "Carousel Four",
