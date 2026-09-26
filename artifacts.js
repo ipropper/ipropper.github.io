@@ -15,9 +15,33 @@ var ARTIFACTS = [
   },
   { title: "Moonmad", images: [] },
   { title: "The Merry Jesters", images: [] },
-  { title: "Carousel Four", images: [] },
-  { title: "Carousel Five", images: [] },
-  { title: "Carousel Six", images: [] }
+  {
+    title: "Carousel Four",
+    images: [
+      "artifacts/bronze-1.jpg",
+      "artifacts/bronze-2.jpg",
+      "artifacts/bronze-3.jpg",
+      "artifacts/bronze-source.jpg"
+    ]
+  },
+  {
+    title: "Carousel Five",
+    images: [
+      "artifacts/owl-1.jpg",
+      "artifacts/owl-2.jpg",
+      "artifacts/owl-3.jpg",
+      "artifacts/owl-source.jpg"
+    ]
+  },
+  {
+    title: "Carousel Six",
+    images: [
+      "artifacts/guard-1.jpg",
+      "artifacts/guard-2.jpg",
+      "artifacts/guard-3.jpg",
+      "artifacts/guard-source.jpg"
+    ]
+  }
 ];
 
 (function () {
