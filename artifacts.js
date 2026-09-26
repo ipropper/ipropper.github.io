@@ -22,7 +22,15 @@ var ARTIFACTS = [
       "artifacts/moonmad-source.jpg"
     ]
   },
-  { title: "The Merry Jesters", images: [] },
+  {
+    title: "The Merry Jesters",
+    images: [
+      "artifacts/jesters-1.jpg",
+      "artifacts/jesters-2.jpg",
+      "artifacts/jesters-3.jpg",
+      "artifacts/jesters-source.jpg"
+    ]
+  },
   {
     title: "Carousel Four",
     images: [
