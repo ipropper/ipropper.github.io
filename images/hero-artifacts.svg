@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" role="img" aria-label="Two framed pictures and a sculpture on a plinth in a gallery">
+  <g stroke="#121212" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M18 168 L462 168"/>
+    <rect x="34" y="40" width="104" height="82"/>
+    <rect x="46" y="52" width="80" height="58" stroke-width="2"/>
+    <path d="M58 98 L82 68 L100 90 L112 78" stroke-width="2"/>
+    <rect x="336" y="28" width="110" height="96"/>
+    <rect x="348" y="40" width="86" height="72" stroke-width="2"/>
+    <circle cx="378" cy="66" r="10" stroke-width="2"/>
+    <path d="M356 106 L386 78 L404 96 L420 84 L426 92" stroke-width="2"/>
+    <path d="M206 168 L206 104 L274 104 L274 168"/>
+    <path d="M206 104 L274 104"/>
+    <circle cx="240" cy="62" r="20"/>
+    <path d="M228 47 C220 34 226 26 234 30"/>
+    <path d="M252 47 C260 34 254 26 246 30"/>
+    <circle cx="233" cy="60" r="3.5" stroke-width="2"/>
+    <circle cx="247" cy="60" r="3.5" stroke-width="2"/>
+    <circle cx="240" cy="72" r="4" stroke-width="2"/>
+    <path d="M240 82 L240 104"/>
+  </g>
+</svg>

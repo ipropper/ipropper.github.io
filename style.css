@@ -307,6 +307,78 @@ h2{
 /* solved posts sink to the bottom of the feed and sit back */
 .is-solved{opacity:.62}
 .is-solved .post-img{filter:grayscale(1)}
+/* the Artifacts tab: one swipeable reel of photos per challenge */
+.artifacts{text-align:left}
+.reel{margin:0 0 2.4rem}
+.reel + .reel{padding-top:2rem;border-top:1px solid var(--grey-line)}
+.reel-title{
+  margin:0 0 .8rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:1.5rem;
+  font-weight:700;
+  line-height:1.15;
+  text-wrap:balance;
+}
+.reel-stage{position:relative}
+.reel-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  border:1px solid var(--ink);
+  background:var(--paper-deep);
+}
+.reel-track::-webkit-scrollbar{display:none}
+.reel-track:focus-visible{outline:2px solid var(--blood);outline-offset:3px}
+.slide{flex:0 0 100%;margin:0;scroll-snap-align:start}
+.slide img{
+  display:block;
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:contain;
+}
+.reel-arrow{
+  position:absolute;
+  top:50%;
+  translate:0 -50%;
+  display:grid;
+  place-items:center;
+  width:2.4rem;
+  height:2.4rem;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:var(--ink);
+  color:var(--paper);
+  cursor:pointer;
+}
+.reel-arrow svg{width:1.1rem;height:1.1rem;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.reel-arrow:hover{background:var(--blood)}
+.reel-arrow:focus-visible{outline:2px solid var(--blood);outline-offset:2px}
+.reel-prev{left:.6rem}
+.reel-next{right:.6rem}
+.reel-dots{display:flex;justify-content:center;gap:.45rem;margin-top:.8rem}
+.reel-dot{
+  width:.55rem;
+  height:.55rem;
+  padding:0;
+  border:1px solid var(--grey);
+  border-radius:50%;
+  background:none;
+  cursor:pointer;
+}
+.reel-dot[aria-current="true"]{background:var(--blood);border-color:var(--blood)}
+.reel-dot:focus-visible{outline:2px solid var(--blood);outline-offset:2px}
+.reel-empty{
+  margin:0;
+  padding:2.4rem 1rem;
+  border:1px dashed var(--grey-line);
+  color:var(--grey);
+  font-family:"IM Fell English", "Spectral", Georgia, serif;
+  font-style:italic;
+  text-align:center;
+}
 .itinerary{
   margin:0;
 }

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<noscript><style>.topnav .tab{display:none}#head-mysteries,#panel-mysteries{display:block}</style></noscript>
+<noscript><style>.topnav .tab{display:none}#head-mysteries,#panel-mysteries,#head-artifacts,#panel-artifacts{display:block}</style></noscript>
 </head>
 <body>
 <nav class="topnav" aria-label="Sections">
@@ -18,6 +18,7 @@
   <div class="nav-links" role="tablist">
     <button class="tab" type="button" id="tab-itinerary" role="tab" aria-selected="true" aria-controls="head-invite panel-itinerary">Itinerary</button>
     <button class="tab" type="button" id="tab-mysteries" role="tab" aria-selected="false" aria-controls="head-mysteries panel-mysteries">Mysteries</button>
+    <button class="tab" type="button" id="tab-artifacts" role="tab" aria-selected="false" aria-controls="head-artifacts panel-artifacts">Artifacts</button>
   </div>
 </nav>
 <main class="brief home">
@@ -32,6 +33,12 @@
     <img class="hero" src="images/hero-mysteries.svg" alt="">
     <h1>Mysteries</h1>
     <p class="subtitle">Strange reportings across the property.</p>
+  </header>
+
+  <header id="head-artifacts" class="head-mysteries" hidden>
+    <img class="hero" src="images/hero-artifacts.svg" alt="">
+    <h1>Artifacts</h1>
+    <p class="subtitle">What the challenges left behind.</p>
   </header>
 
   <section class="panel itinerary" id="panel-itinerary" role="tabpanel" aria-labelledby="tab-itinerary">
@@ -64,9 +71,15 @@
     <noscript><p class="post-meta">The posts need JavaScript to load.</p></noscript>
   </section>
 
+  <section class="panel artifacts" id="panel-artifacts" role="tabpanel" aria-labelledby="tab-artifacts">
+    <div id="artifacts"></div>
+    <noscript><p class="reel-empty">The carousels need JavaScript to load.</p></noscript>
+  </section>
+
   <img class="dagger" src="dagger.svg" alt="">
   <p class="signoff">Good luck, players.</p>
 </main>
 <script src="mysteries.js"></script>
+<script src="artifacts.js"></script>
 </body>
 </html>
