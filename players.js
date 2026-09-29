@@ -52,7 +52,7 @@ var PLAYERS = [
   },
   {
     name: "Shrey", slug: "shrey", role: "faithful", src: "player-6.jpg",
-    death: "Banishment",
+    death: "Daisy’s wrath",
     timeline: [
       { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_5260.mp4", poster: "clip-1.jpg" }
     ]
@@ -219,7 +219,7 @@ var ROUNDS = [
   },
   {
     label: "Early night", when: "Saturday",
-    note: "Steph fails a traitor mission and takes the sugar packet. Shrey is voted out.",
+    note: "Steph fails a traitor mission and takes the sugar packet, and Daisy&rsquo;s wrath takes Shrey.",
     out: ["steph", "shrey"]
   },
   {
