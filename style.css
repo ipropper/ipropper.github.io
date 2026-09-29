@@ -548,6 +548,13 @@ h2{
   border:1px solid var(--ink);
   background:var(--paper-deep);
 }
+/* the clips are portrait; fixing the box keeps the page from jumping when a
+   remote video's metadata finally lands, and letterboxes anything that isn't */
+.beat video{
+  aspect-ratio:9/16;
+  object-fit:contain;
+  background:var(--ink);
+}
 .signoff a{color:inherit}
 /* the nav on a player page is a single link back, not a tablist */
 a.tab{display:inline-block;text-decoration:none}
