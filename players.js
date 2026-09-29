@@ -3,17 +3,36 @@
 // Add a player by dropping the photo in players/ and appending here,
 // then re-run build-players.mjs to write their page at players/<slug>/.
 // Optional per player: `death` (a cause, shown under the badge) and
-// `clips` / `stills`, whose paths are relative to that player's folder.
+// `timeline`, a list of beats. A beat takes any of `text`, `media`
+// (an image) and `clip` (a video, with an optional `poster`); media
+// paths are relative to that player's own folder.
 // The grid is 3 across on phones and 5 on desktop, and the red thread
 // is redrawn from wherever the cards actually land.
 var PLAYERS = [
   {
     name: "Alex", slug: "alex", role: "faithful", src: "players/player-1.jpg",
     death: "Murdered in Clue",
-    stills: ["still-1.jpg", "still-2.jpg"]
+    timeline: [
+      { media: "still-1.jpg" },
+      { media: "still-2.jpg" }
+    ]
   },
-  { name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg" },
-  { name: "Derek", slug: "derek", role: "faithful", src: "players/player-3.jpg" },
+  {
+    name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg",
+    death: "Friendly Fire",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { text: "Becomes a traitor, recruited by the imposter card.", media: "imposter-card.webp" },
+      { text: "Murdered by his fellow traitors." }
+    ]
+  },
+  {
+    name: "Derek", slug: "derek", role: "faithful", src: "players/player-3.jpg",
+    death: "Early flight home",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
   { name: "Dew", slug: "dew", role: "faithful", src: "players/player-4.jpg" },
   { name: "Kamala", slug: "kamala", role: "faithful", src: "players/player-5.jpg" },
   { name: "Shrey", slug: "shrey", role: "faithful", src: "players/player-6.jpg" },

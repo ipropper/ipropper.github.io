@@ -19,25 +19,31 @@ const PLAYERS = new Function('return ' + body[1])();
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// clips and stills live beside the page, so their paths need no prefix
-function evidence(p) {
-  const clips = (p.clips || []).map((c) => {
-    const poster = typeof c === 'string' ? '' : ` poster="${esc(c.poster)}"`;
-    const src = typeof c === 'string' ? c : c.src;
-    return `      <video class="clip" controls playsinline preload="metadata"${poster}>
-        <source src="${esc(src)}">
-      </video>`;
-  });
-  const stills = (p.stills || []).map(
-    (s) => `      <img class="clip" src="${esc(s)}" alt="" loading="lazy">`
-  );
-  const items = clips.concat(stills);
-  if (!items.length) return '';
-  return `  <section class="evidence">
-    <h2>Evidence</h2>
-    <div class="evidence-reel">
-${items.join('\n')}
-    </div>
+// a timeline beat is any of a sentence, an image and a video, and the
+// media sits beside the page, so its path needs no prefix
+function beat(b) {
+  const parts = [];
+  if (b.text) parts.push(`        <p>${esc(b.text)}</p>`);
+  if (b.clip) {
+    const poster = b.poster ? ` poster="${esc(b.poster)}"` : '';
+    parts.push(`        <video controls playsinline preload="metadata"${poster}>
+          <source src="${esc(b.clip)}">
+        </video>`);
+  }
+  if (b.media) parts.push(`        <img src="${esc(b.media)}" alt="" loading="lazy">`);
+  return `      <li class="beat">
+${parts.join('\n')}
+      </li>`;
+}
+
+function timeline(p) {
+  const beats = p.timeline || [];
+  if (!beats.length) return '';
+  return `  <section class="timeline">
+    <h2>Timeline</h2>
+    <ol>
+${beats.map(beat).join('\n')}
+    </ol>
   </section>
 `;
 }
@@ -72,7 +78,7 @@ ${p.death ? `  <p class="dossier-death"><span>Cause of death</span>${esc(p.death
   <p class="dossier-line">${traitor
     ? 'Sat at the table every night and lied through all of it.'
     : 'Played it straight the whole weekend.'}</p>
-${evidence(p)}\
+${timeline(p)}\
   <img class="dagger" src="../../dagger.svg" alt="">
   <p class="signoff"><a href="../../#players">Back to the board</a></p>
 </main>
