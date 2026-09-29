@@ -423,7 +423,7 @@ h2{
 .suspect{
   position:relative;
   margin:var(--drop) 0 0;
-  padding:.35rem .35rem 1rem;
+  padding:.35rem;
   background:#FFFFFF;
   border:1px solid var(--grey-line);
   box-shadow:0 2px 7px rgba(0,0,0,.2);
@@ -440,8 +440,11 @@ h2{
 }
 .suspect:hover img,
 .suspect:focus-within img{filter:none}
-.suspect figcaption{
-  margin-top:.3rem;
+.suspect-link{display:block;color:inherit;text-decoration:none}
+.suspect-link:focus-visible{outline:2px solid var(--blood);outline-offset:3px}
+.suspect-name{
+  display:block;
+  padding:.45rem .1rem .2rem;
   font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
   font-size:.6rem;
   font-weight:700;
@@ -450,6 +453,43 @@ h2{
   text-align:center;
   color:var(--ink);
 }
+.suspect-link:hover .suspect-name{color:var(--blood)}
+
+/* a player's own page: the photo is the masthead, the verdict sits under it */
+.dossier-shot{
+  display:block;
+  width:min(17rem, 78%);
+  margin:.4rem auto 1.6rem;
+  padding:.5rem .5rem 1.4rem;
+  background:#FFFFFF;
+  border:1px solid var(--grey-line);
+  box-shadow:0 3px 12px rgba(0,0,0,.24);
+  rotate:-1.6deg;
+}
+.dossier h1{margin-bottom:.35em}
+.verdict-badge{
+  display:inline-block;
+  margin:0 0 1.1rem;
+  padding:.3rem 1.1rem;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.verdict-badge.is-traitor{background:var(--blood);border-color:var(--blood);color:var(--paper)}
+.verdict-badge.is-faithful{background:none;color:var(--ink)}
+.dossier-line{
+  margin:0;
+  font-family:"IM Fell English", "Spectral", Georgia, serif;
+  font-style:italic;
+  color:var(--grey);
+}
+.signoff a{color:inherit}
+/* the nav on a player page is a single link back, not a tablist */
+a.tab{display:inline-block;text-decoration:none}
 .pin{
   position:absolute;
   top:-.42rem;

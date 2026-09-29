@@ -1,32 +1,33 @@
 // The Players tab: an evidence board.
 //
-// Add a player by dropping the photo in players/ and appending here.
-// `name` is optional — leave it off and the card stays a blank polaroid.
+// Add a player by dropping the photo in players/ and appending here,
+// then re-run build-players.mjs to write their page at players/<slug>/.
 // The grid is 3 across on phones and 5 on desktop, and the red thread
 // is redrawn from wherever the cards actually land.
 var PLAYERS = [
-  { src: "players/player-1.jpg" },
-  { src: "players/player-2.jpg" },
-  { src: "players/player-3.jpg" },
-  { src: "players/player-4.jpg" },
-  { src: "players/player-5.jpg" },
-  { src: "players/player-6.jpg" },
-  { src: "players/player-7.jpg" },
-  { src: "players/player-8.jpg" },
-  { src: "players/player-9.jpg" },
-  { src: "players/player-10.jpg" },
-  { src: "players/player-11.jpg" },
-  { src: "players/player-12.jpg" },
-  { src: "players/player-13.jpg" },
-  { src: "players/player-14.jpg" },
-  { src: "players/player-15.jpg" },
-  { src: "players/player-16.jpg" },
-  { src: "players/player-17.jpg" },
-  { src: "players/player-18.jpg" },
-  { src: "players/player-19.jpg" },
-  { src: "players/player-20.jpg" },
-  { src: "players/player-21.jpg" },
-  { src: "players/player-22.jpg" }
+  { name: "Alex", slug: "alex", role: "traitor", src: "players/player-1.jpg" },
+  { name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg" },
+  { name: "Derek", slug: "derek", role: "traitor", src: "players/player-3.jpg" },
+  { name: "Dew", slug: "dew", role: "traitor", src: "players/player-4.jpg" },
+  { name: "Kamala", slug: "kamala", role: "traitor", src: "players/player-5.jpg" },
+  { name: "Shrey", slug: "shrey", role: "traitor", src: "players/player-6.jpg" },
+  { name: "Ash", slug: "ash", role: "faithful", src: "players/player-7.jpg" },
+  { name: "Erkina", slug: "erkina", role: "traitor", src: "players/player-8.jpg" },
+  { name: "Phil", slug: "phil", role: "faithful", src: "players/player-9.jpg" },
+  { name: "Bailey", slug: "bailey", role: "traitor", src: "players/player-10.jpg" },
+  { name: "Ada", slug: "ada", role: "traitor", src: "players/player-11.jpg" },
+  { name: "Steph", slug: "steph", role: "faithful", src: "players/player-12.jpg" },
+  { name: "Susie", slug: "susie", role: "traitor", src: "players/player-13.jpg" },
+  { name: "Nick", slug: "nick", role: "traitor", src: "players/player-14.jpg" },
+  { name: "Ardyn", slug: "ardyn", role: "traitor", src: "players/player-15.jpg" },
+  { name: "Daniel", slug: "daniel", role: "traitor", src: "players/player-16.jpg" },
+  { name: "Check", slug: "check", role: "traitor", src: "players/player-17.jpg" },
+  { name: "Sasha", slug: "sasha", role: "traitor", src: "players/player-18.jpg" },
+  { name: "Devon", slug: "devon", role: "traitor", src: "players/player-19.jpg" },
+  { name: "Navya", slug: "navya", role: "traitor", src: "players/player-20.jpg" },
+  { name: "Kushal", slug: "kushal", role: "traitor", src: "players/player-21.jpg" },
+  { name: "Zac", slug: "zac", role: "faithful", src: "players/player-22.jpg" },
+  { name: "Dan", slug: "dan", role: "traitor", src: "players/player-23.jpg" }
 ];
 
 (function () {
@@ -42,10 +43,11 @@ var PLAYERS = [
     html += '<figure class="suspect" style="--tilt:' + TILT[i % TILT.length] + 'deg;' +
       '--drop:' + DROP[i % DROP.length] + 'px">' +
       '<span class="pin" aria-hidden="true"></span>' +
-      '<img src="' + p.src + '" alt="' + (p.name || 'A player') + '"' +
-      (i < 6 ? '' : ' loading="lazy"') + '>' +
-      (p.name ? '<figcaption>' + p.name + '</figcaption>' : '') +
-      '</figure>';
+      '<a class="suspect-link" href="players/' + p.slug + '/">' +
+      // the name beside it is what labels the link, so the photo needs no alt
+      '<img src="' + p.src + '" alt=""' + (i < 6 ? '' : ' loading="lazy"') + '>' +
+      '<span class="suspect-name">' + p.name + '</span>' +
+      '</a></figure>';
   });
   html += '</div>';
   board.innerHTML = html;
