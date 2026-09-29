@@ -121,10 +121,20 @@ var MYSTERIES = [
     });
   });
 
+  // the Players tab became its own page; honour the old hash link, on a
+  // fresh load and on a same-document hash change alike
+  function leaveForPlayers() {
+    if ((window.location.hash || '') !== '#players') return false;
+    window.location.replace('players/');
+    return true;
+  }
+  if (leaveForPlayers()) return;
+
   var marked = tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0];
   select(fromHash() || marked || tabs[0], false);
 
   window.addEventListener('hashchange', function () {
+    if (leaveForPlayers()) return;
     var tab = fromHash();
     if (tab) select(tab, true);
   });
