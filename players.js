@@ -22,7 +22,7 @@ var PLAYERS = [
     name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg",
     death: "Friendly Fire",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7438.mp4", poster: "clip-1.jpg" },
       { text: "Becomes a traitor, recruited by the imposter card.", media: "imposter-card.webp" },
       { text: "Murdered by his fellow traitors." }
     ]
@@ -31,42 +31,42 @@ var PLAYERS = [
     name: "Derek", slug: "derek", role: "faithful", src: "players/player-3.jpg",
     death: "Early flight home",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7426.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Dew", slug: "dew", role: "faithful", src: "players/player-4.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7427.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Kamala", slug: "kamala", role: "faithful", src: "players/player-5.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7428.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Shrey", slug: "shrey", role: "faithful", src: "players/player-6.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_5260.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Ash", slug: "ash", role: "traitor", src: "players/player-7.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7434.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Erkina", slug: "erkina", role: "faithful", src: "players/player-8.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7432.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
@@ -82,7 +82,7 @@ var PLAYERS = [
     name: "Bailey", slug: "bailey", role: "faithful", src: "players/player-10.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7422.mp4", poster: "clip-1.jpg" },
       { media: "clip-2.jpg" }
     ]
   },
@@ -90,21 +90,21 @@ var PLAYERS = [
     name: "Ada", slug: "ada", role: "faithful", src: "players/player-11.jpg",
     death: "First blood!",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7431.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Steph", slug: "steph", role: "traitor", src: "players/player-12.jpg",
     death: "Suicide via sugar packet",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7419.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Susie", slug: "susie", role: "faithful", src: "players/player-13.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7424.mp4", poster: "clip-1.jpg" },
       { media: "clip-2.jpg" }
     ]
   },
@@ -112,7 +112,7 @@ var PLAYERS = [
     name: "Nick", slug: "nick", role: "faithful", src: "players/player-14.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7436.mp4", poster: "clip-1.jpg" },
       { media: "clip-2.jpg" }
     ]
   },
@@ -128,21 +128,21 @@ var PLAYERS = [
     name: "Daniel", slug: "daniel", role: "faithful", src: "players/player-16.jpg",
     death: "First blood",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7425.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Check", slug: "check", role: "faithful", src: "players/player-17.jpg",
     death: "Boredom",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7421.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Sasha", slug: "sasha", role: "faithful", src: "players/player-18.jpg",
     death: "Banishment, the true death",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7430.mp4", poster: "clip-1.jpg" },
       { text: "Murdered." },
       { text: "Brought back by Daisy’s grace.", media: "holy-prayer.webp" },
       { text: "Banished. That one stuck." }
@@ -152,14 +152,14 @@ var PLAYERS = [
     name: "Devon", slug: "devon", role: "faithful", src: "players/player-19.jpg",
     death: "Murdered",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7429.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Navya", slug: "navya", role: "faithful", src: "players/player-20.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7467.mp4", poster: "clip-1.jpg" },
       { media: "clip-2.jpg" }
     ]
   },
@@ -167,14 +167,14 @@ var PLAYERS = [
     name: "Kushal", slug: "kushal", role: "faithful", src: "players/player-21.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7468.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
     name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg",
     death: "Banishment",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7437.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
