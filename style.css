@@ -379,6 +379,82 @@ h2{
   font-style:italic;
   text-align:center;
 }
+/* the Players tab: photos pinned to a wall and joined with red thread */
+.players{text-align:left}
+/* the board wants more room than the 34rem reading column allows */
+@media (min-width:56rem){
+  .players{
+    width:min(52rem, calc(100vw - 3rem));
+    margin-left:50%;
+    transform:translateX(-50%);
+  }
+}
+.board{position:relative}
+.board-web{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:visible;
+  z-index:0;
+}
+.board-web line{stroke:var(--blood);stroke-width:1.5;opacity:.8}
+.board-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1.5rem .9rem;
+  padding-top:.6rem;
+}
+@media (min-width:44rem){
+  .board-grid{grid-template-columns:repeat(5, 1fr);gap:1.8rem 1.1rem}
+}
+.suspect{
+  position:relative;
+  margin:var(--drop) 0 0;
+  padding:.35rem .35rem 1rem;
+  background:#FFFFFF;
+  border:1px solid var(--grey-line);
+  box-shadow:0 2px 7px rgba(0,0,0,.2);
+  rotate:var(--tilt);
+}
+.suspect img{
+  display:block;
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  /* surveillance shots: colour comes back when you look closer */
+  filter:grayscale(1) contrast(1.06);
+  transition:filter .25s ease;
+}
+.suspect:hover img,
+.suspect:focus-within img{filter:none}
+.suspect figcaption{
+  margin-top:.3rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  text-align:center;
+  color:var(--ink);
+}
+.pin{
+  position:absolute;
+  top:-.42rem;
+  left:50%;
+  translate:-50% 0;
+  width:.85rem;
+  height:.85rem;
+  border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, var(--blood-bright), var(--blood) 58%, #6E0A10);
+  box-shadow:0 1px 2px rgba(0,0,0,.4);
+}
+@media (prefers-reduced-motion:reduce){
+  .suspect img{transition:none}
+}
 .itinerary{
   margin:0;
 }
