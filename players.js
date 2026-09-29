@@ -5,7 +5,8 @@
 // Optional per player: `death` or `fate` (shown under the badge) and
 // `timeline`, a list of beats. A beat takes any of `text`, `media`
 // (an image) and `clip` (a video, with an optional `poster`); media
-// paths are relative to that player's own folder.
+// paths are relative to that player's own folder, except `clip`,
+// which is an absolute URL on the R2 bucket.
 // The grid is 3 across on phones and 5 on desktop, and the red thread
 // is redrawn from wherever the cards actually land.
 var PLAYERS = [
@@ -13,7 +14,7 @@ var PLAYERS = [
     name: "Alex", slug: "alex", role: "faithful", src: "players/player-1.jpg",
     death: "Murdered in Clue",
     timeline: [
-      { media: "still-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_3573.mp4", poster: "still-1.jpg" },
       { media: "still-2.jpg" }
     ]
   },
