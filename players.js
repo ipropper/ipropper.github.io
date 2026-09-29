@@ -179,10 +179,10 @@ var PLAYERS = [
     name: "Dan", slug: "dan", role: "faithful", src: "player-23.jpg",
     fate: "Survived to the bitter end",
     timeline: [
-      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/dan2.mp4", poster: "clip-1.jpg" },
-      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7437.mp4", poster: "clip-2.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/dan1.mp4", poster: "clip-2.jpg" },
       { text: "Banished." },
-      { text: "Resurrected by the Christian Daisy.", media: "holy-prayer.webp" }
+      { text: "Brought back by the Christian Daisy.", media: "holy-prayer.webp" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/dan2.mp4", poster: "clip-1.jpg" }
     ]
   },
   {
