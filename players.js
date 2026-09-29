@@ -154,11 +154,44 @@ var PLAYERS = [
       { media: "clip-1.jpg" }
     ]
   },
-  { name: "Navya", slug: "navya", role: "faithful", src: "players/player-20.jpg" },
-  { name: "Kushal", slug: "kushal", role: "faithful", src: "players/player-21.jpg" },
-  { name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg" },
-  { name: "Dan", slug: "dan", role: "faithful", src: "players/player-23.jpg" },
-  { name: "Gautham", slug: "gautham", role: "faithful", src: "players/player-24.jpg" }
+  {
+    name: "Navya", slug: "navya", role: "faithful", src: "players/player-20.jpg",
+    death: "Banishment",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { media: "clip-2.jpg" }
+    ]
+  },
+  {
+    name: "Kushal", slug: "kushal", role: "faithful", src: "players/player-21.jpg",
+    death: "Banishment",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
+  {
+    name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg",
+    death: "Banishment",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
+  {
+    name: "Dan", slug: "dan", role: "faithful", src: "players/player-23.jpg",
+    fate: "Survived to the bitter end",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { text: "Banished." },
+      { text: "Resurrected by the Christian Daisy.", media: "holy-prayer.webp" }
+    ]
+  },
+  {
+    name: "Gautham", slug: "gautham", role: "faithful", src: "players/player-24.jpg",
+    death: "Early flight",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  }
 ];
 
 (function () {
