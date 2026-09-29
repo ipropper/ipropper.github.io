@@ -454,6 +454,109 @@ h2{
   color:var(--ink);
 }
 .suspect-link:hover .suspect-name{color:var(--blood)}
+/* the state a slider puts a player in is worth saying out loud, but
+   the X already says it on screen */
+.suspect-state{
+  position:absolute;
+  width:1px;height:1px;
+  margin:-1px;padding:0;border:0;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+.shot{display:block;position:relative}
+.cross{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .22s ease;
+}
+.cross path{
+  fill:none;
+  stroke:var(--blood-bright);
+  stroke-width:3.5;
+  stroke-linecap:round;
+  vector-effect:non-scaling-stroke;
+  opacity:.92;
+}
+.suspect.is-out .cross{opacity:1}
+.suspect.is-out .shot img{opacity:.68}
+.suspect.is-out .suspect-name{color:var(--grey)}
+
+/* the weekend on a slider: drag it and the board empties */
+.timebar{
+  margin:0 0 1.6rem;
+  padding:.85rem 1rem 1rem;
+  background:var(--paper-deep);
+  border:1px solid var(--grey-line);
+  box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+.timebar-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.15rem .7rem;
+  margin:0 0 .5rem;
+}
+.timebar-when{
+  margin:0;
+  font-size:.62rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--blood);
+}
+.timebar-stage{
+  margin:0;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:1rem;
+  font-weight:700;
+  color:var(--ink);
+}
+.timebar-range{
+  display:block;
+  width:100%;
+  height:1.6rem;
+  margin:0;
+  accent-color:var(--blood);
+  cursor:grab;
+}
+.timebar-range:active{cursor:grabbing}
+.timebar-range:focus-visible{outline:2px solid var(--blood);outline-offset:3px}
+.timebar-ends{
+  display:flex;
+  justify-content:space-between;
+  font-size:.6rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.timebar-note{
+  margin:.55rem 0 0;
+  font-family:"IM Fell English", Georgia, serif;
+  font-style:italic;
+  font-size:.95rem;
+  line-height:1.5;
+  color:var(--ink);
+  /* three lines of room, so the board below does not jump on every drag */
+  min-height:4.3rem;
+}
+.timebar-count{
+  margin:0;
+  font-size:.62rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.timebar-count strong{color:var(--blood);font-size:.9rem}
+.timebar.is-done{border-color:var(--blood);box-shadow:0 1px 4px rgba(165,15,23,.22)}
+@media (min-width:44rem){
+  .timebar-note{min-height:3rem}
+}
 
 /* a player's own page: the photo is the masthead, the verdict sits under it */
 .dossier-shot{
@@ -570,7 +673,8 @@ a.tab{display:inline-block;text-decoration:none}
   box-shadow:0 1px 2px rgba(0,0,0,.4);
 }
 @media (prefers-reduced-motion:reduce){
-  .suspect img{transition:none}
+  .suspect img,
+  .cross{transition:none}
 }
 .itinerary{
   margin:0;

@@ -9,7 +9,8 @@
 // paths are relative to that player's own folder, except `clip`,
 // which is an absolute URL on the R2 bucket.
 // The grid is 3 across on phones and 5 on desktop, and the red thread
-// is redrawn from wherever the cards actually land.
+// is redrawn from wherever the cards actually land. ROUNDS, below the
+// roster, is the elimination order the timeline slider replays.
 var PLAYERS = [
   {
     name: "Alex", slug: "alex", role: "faithful", src: "player-1.jpg",
@@ -193,6 +194,68 @@ var PLAYERS = [
     ]
   }
 ];
+// How the table emptied, one drag of the slider at a time.
+//
+// Stage 0 is the whole cast, still alive. Each stage after it names who
+// left (`out`) and who came back (`back`, applied first, so a player can
+// be resurrected and voted out again later). The slider replays the
+// stages in order, so the order written here is the order it happened.
+var ROUNDS = [
+  { label: "The table is full", when: "Friday", note: "Twenty-four players. Five of them are lying." },
+  {
+    label: "Night one", when: "Friday",
+    note: "First blood. Daniel and Ada are found in the morning, and Dan is banished at the table.",
+    out: ["daniel", "ada", "dan"]
+  },
+  {
+    label: "Morning", when: "Saturday",
+    note: "The Christian Daisy brings Dan back. Check quits, and Erkina is voted out.",
+    back: ["dan"], out: ["check", "erkina"]
+  },
+  {
+    label: "Midday", when: "Saturday",
+    note: "Joe took the imposter card, and his fellow traitors murdered him for it.",
+    out: ["joe"]
+  },
+  {
+    label: "Early night", when: "Saturday",
+    note: "Steph fails a traitor mission and takes the sugar packet. Shrey is voted out.",
+    out: ["steph", "shrey"]
+  },
+  {
+    label: "The long vote", when: "Saturday",
+    note: "Three more go round the table: Ash, Nick, then Kamala.",
+    out: ["ash", "nick", "kamala"]
+  },
+  {
+    label: "After dark", when: "Saturday",
+    note: "Sasha and Devon are murdered in the dark.",
+    out: ["sasha", "devon"]
+  },
+  {
+    label: "Flights home", when: "Saturday",
+    note: "Gautham and Derek have to leave, so the traitors write them off.",
+    out: ["gautham", "derek"]
+  },
+  {
+    label: "Morning", when: "Sunday",
+    note: "Alex is murdered in Clue.",
+    out: ["alex"]
+  },
+  {
+    label: "Two clues", when: "Sunday",
+    note: "Sasha plays two clues from beyond the grave: Phil meets Daisy&rsquo;s wrath, and Sasha walks back in.",
+    back: ["sasha"], out: ["phil"]
+  },
+  { label: "The final votes: Sasha", when: "Sunday", note: "Back at the table an hour, and voted straight back out.", out: ["sasha"] },
+  { label: "The final votes: Susie", when: "Sunday", note: "The host goes to the vote.", out: ["susie"] },
+  { label: "The final votes: Dew", when: "Sunday", note: "The votes are coming quickly now.", out: ["dew"] },
+  { label: "The final votes: Kushal", when: "Sunday", note: "Nobody at this table is safe.", out: ["kushal"] },
+  { label: "The final votes: Navya", when: "Sunday", note: "Another faithful, gone on a wrong read.", out: ["navya"] },
+  { label: "The final votes: Bailey", when: "Sunday", note: "One name left on the slate.", out: ["bailey"] },
+  { label: "The final votes: Zac", when: "Sunday", note: "The last traitor at the table, banished.", out: ["zac"] },
+  { label: "Faithful victory", when: "Sunday", note: "Dan and Ardyn are the last two standing, and the faithful take it." }
+];
 
 (function () {
   var board = document.getElementById('board');
@@ -204,13 +267,19 @@ var PLAYERS = [
 
   var html = '<svg class="board-web" aria-hidden="true"></svg><div class="board-grid">';
   PLAYERS.forEach(function (p, i) {
-    html += '<figure class="suspect" style="--tilt:' + TILT[i % TILT.length] + 'deg;' +
+    html += '<figure class="suspect" data-slug="' + p.slug + '" style="--tilt:' + TILT[i % TILT.length] + 'deg;' +
       '--drop:' + DROP[i % DROP.length] + 'px">' +
       '<span class="pin" aria-hidden="true"></span>' +
       '<a class="suspect-link" href="' + p.slug + '/">' +
+      '<span class="shot">' +
       // the name beside it is what labels the link, so the photo needs no alt
       '<img src="' + p.src + '" alt=""' + (i < 6 ? '' : ' loading="lazy"') + '>' +
+      // the X is drawn rather than filtered in, so it lands on the corners
+      '<svg class="cross" viewBox="0 0 30 40" preserveAspectRatio="none" aria-hidden="true">' +
+      '<path d="M3 3 L27 37"/><path d="M27 3 L3 37"/></svg>' +
+      '</span>' +
       '<span class="suspect-name">' + p.name + '</span>' +
+      '<span class="suspect-state"></span>' +
       '</a></figure>';
   });
   html += '</div>';
@@ -256,4 +325,63 @@ var PLAYERS = [
     var img = c.querySelector('img');
     if (img && !img.complete) img.addEventListener('load', draw);
   });
+
+  // ---- the weekend, on a slider -------------------------------------
+
+  var bar = document.getElementById('timebar');
+  if (!bar || typeof ROUNDS === 'undefined' || ROUNDS.length < 2) return;
+
+  var last = ROUNDS.length - 1;
+  bar.innerHTML =
+    '<div class="timebar-head">' +
+      '<p class="timebar-when" id="timebar-when"></p>' +
+      '<p class="timebar-stage" id="timebar-stage"></p>' +
+    '</div>' +
+    '<input class="timebar-range" id="timebar-range" type="range" min="0" max="' + last + '"' +
+      ' step="1" value="0" aria-label="Drag through the weekend">' +
+    '<div class="timebar-ends"><span>Friday</span><span>Sunday</span></div>' +
+    '<p class="timebar-note" id="timebar-note" role="status"></p>' +
+    '<p class="timebar-count"><strong id="timebar-in"></strong> still in</p>';
+
+  var range = document.getElementById('timebar-range');
+  var elWhen = document.getElementById('timebar-when');
+  var elStage = document.getElementById('timebar-stage');
+  var elNote = document.getElementById('timebar-note');
+  var elIn = document.getElementById('timebar-in');
+
+  var byslug = {};
+  cards.forEach(function (c) { byslug[c.getAttribute('data-slug')] = c; });
+
+  // replayed from the top every time, so dragging backwards is exact
+  function outAt(n) {
+    var out = {};
+    for (var i = 0; i <= n; i++) {
+      var r = ROUNDS[i];
+      (r.back || []).forEach(function (s) { delete out[s]; });
+      (r.out || []).forEach(function (s) { out[s] = true; });
+    }
+    return out;
+  }
+
+  function show(n) {
+    var r = ROUNDS[n];
+    var out = outAt(n);
+    var gone = 0;
+    PLAYERS.forEach(function (p) {
+      var card = byslug[p.slug];
+      if (!card) return;
+      var isOut = !!out[p.slug];
+      if (isOut) gone++;
+      card.classList.toggle('is-out', isOut);
+      card.querySelector('.suspect-state').textContent = isOut ? ' — out' : '';
+    });
+    elWhen.textContent = r.when || '';
+    elStage.textContent = r.label;
+    elNote.innerHTML = r.note || '';
+    elIn.textContent = String(PLAYERS.length - gone);
+    bar.classList.toggle('is-done', n === last);
+  }
+
+  range.addEventListener('input', function () { show(+range.value); });
+  show(0);
 })();
