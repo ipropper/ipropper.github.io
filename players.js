@@ -68,7 +68,15 @@ var PLAYERS = [
       { media: "clip-1.jpg" }
     ]
   },
-  { name: "Phil", slug: "phil", role: "traitor", src: "players/player-9.jpg" },
+  {
+    name: "Phil", slug: "phil", role: "traitor", src: "players/player-9.jpg",
+    death: "Daisy’s wrath",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { media: "clip-2.jpg" },
+      { media: "cloak-and-dagger.webp" }
+    ]
+  },
   {
     name: "Bailey", slug: "bailey", role: "faithful", src: "players/player-10.jpg",
     death: "Banishment",
@@ -91,7 +99,14 @@ var PLAYERS = [
       { media: "clip-1.jpg" }
     ]
   },
-  { name: "Susie", slug: "susie", role: "faithful", src: "players/player-13.jpg" },
+  {
+    name: "Susie", slug: "susie", role: "faithful", src: "players/player-13.jpg",
+    death: "Banishment",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { media: "clip-2.jpg" }
+    ]
+  },
   {
     name: "Nick", slug: "nick", role: "faithful", src: "players/player-14.jpg",
     death: "Banishment",
@@ -115,9 +130,30 @@ var PLAYERS = [
       { media: "clip-1.jpg" }
     ]
   },
-  { name: "Check", slug: "check", role: "faithful", src: "players/player-17.jpg" },
-  { name: "Sasha", slug: "sasha", role: "faithful", src: "players/player-18.jpg" },
-  { name: "Devon", slug: "devon", role: "faithful", src: "players/player-19.jpg" },
+  {
+    name: "Check", slug: "check", role: "faithful", src: "players/player-17.jpg",
+    death: "Boredom",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
+  {
+    name: "Sasha", slug: "sasha", role: "faithful", src: "players/player-18.jpg",
+    death: "Banishment, the true death",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { text: "Murdered." },
+      { text: "Brought back by Daisy’s grace.", media: "holy-prayer.webp" },
+      { text: "Banished. That one stuck." }
+    ]
+  },
+  {
+    name: "Devon", slug: "devon", role: "faithful", src: "players/player-19.jpg",
+    death: "Murdered",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
   { name: "Navya", slug: "navya", role: "faithful", src: "players/player-20.jpg" },
   { name: "Kushal", slug: "kushal", role: "faithful", src: "players/player-21.jpg" },
   { name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg" },
