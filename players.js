@@ -172,16 +172,14 @@ var PLAYERS = [
   },
   {
     name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg",
-    death: "Banishment",
-    timeline: [
-      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7437.mp4", poster: "clip-1.jpg" }
-    ]
+    death: "Banishment"
   },
   {
     name: "Dan", slug: "dan", role: "faithful", src: "players/player-23.jpg",
     fate: "Survived to the bitter end",
     timeline: [
       { media: "clip-1.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/IMG_7437.mp4", poster: "clip-2.jpg" },
       { text: "Banished." },
       { text: "Resurrected by the Christian Daisy.", media: "holy-prayer.webp" }
     ]
