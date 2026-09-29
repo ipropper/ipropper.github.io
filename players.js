@@ -6,7 +6,7 @@
 // is redrawn from wherever the cards actually land.
 var PLAYERS = [
   { name: "Alex", slug: "alex", role: "faithful", src: "players/player-1.jpg" },
-  { name: "Joe", slug: "joe", role: "faithful", src: "players/player-2.jpg" },
+  { name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg" },
   { name: "Derek", slug: "derek", role: "faithful", src: "players/player-3.jpg" },
   { name: "Dew", slug: "dew", role: "faithful", src: "players/player-4.jpg" },
   { name: "Kamala", slug: "kamala", role: "faithful", src: "players/player-5.jpg" },
