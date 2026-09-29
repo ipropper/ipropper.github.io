@@ -389,6 +389,15 @@ h2{
     transform:translateX(-50%);
   }
 }
+/* the Players masthead is a real photograph, so it gets pinned up like one */
+.head-players .hero{
+  width:min(21rem, 100%);
+  padding:.5rem .5rem 1.4rem;
+  background:#FFFFFF;
+  border:1px solid var(--grey-line);
+  box-shadow:0 3px 10px rgba(0,0,0,.22);
+  rotate:-1.4deg;
+}
 .board{position:relative}
 .board-web{
   position:absolute;

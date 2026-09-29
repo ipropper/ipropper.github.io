@@ -9,7 +9,24 @@ var PLAYERS = [
   { src: "players/player-2.jpg" },
   { src: "players/player-3.jpg" },
   { src: "players/player-4.jpg" },
-  { src: "players/player-5.jpg" }
+  { src: "players/player-5.jpg" },
+  { src: "players/player-6.jpg" },
+  { src: "players/player-7.jpg" },
+  { src: "players/player-8.jpg" },
+  { src: "players/player-9.jpg" },
+  { src: "players/player-10.jpg" },
+  { src: "players/player-11.jpg" },
+  { src: "players/player-12.jpg" },
+  { src: "players/player-13.jpg" },
+  { src: "players/player-14.jpg" },
+  { src: "players/player-15.jpg" },
+  { src: "players/player-16.jpg" },
+  { src: "players/player-17.jpg" },
+  { src: "players/player-18.jpg" },
+  { src: "players/player-19.jpg" },
+  { src: "players/player-20.jpg" },
+  { src: "players/player-21.jpg" },
+  { src: "players/player-22.jpg" }
 ];
 
 (function () {
