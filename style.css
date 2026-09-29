@@ -548,12 +548,6 @@ h2{
   border:1px solid var(--ink);
   background:var(--paper-deep);
 }
-.dossier-line{
-  margin:0;
-  font-family:"IM Fell English", "Spectral", Georgia, serif;
-  font-style:italic;
-  color:var(--grey);
-}
 .signoff a{color:inherit}
 /* the nav on a player page is a single link back, not a tablist */
 a.tab{display:inline-block;text-decoration:none}

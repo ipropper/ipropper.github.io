@@ -75,9 +75,6 @@ function page(p) {
   <h1>${esc(p.name)}</h1>
   <p class="verdict-badge ${traitor ? 'is-traitor' : 'is-faithful'}">${traitor ? 'Traitor' : 'Faithful'}</p>
 ${p.death || p.fate ? `  <p class="dossier-death"><span>${p.death ? 'Cause of death' : 'Fate'}</span>${esc(p.death || p.fate)}</p>\n` : ''}\
-  <p class="dossier-line">${traitor
-    ? 'Sat at the table every night and lied through all of it.'
-    : 'Played it straight the whole weekend.'}</p>
 ${timeline(p)}\
   <img class="dagger" src="../../dagger.svg" alt="">
   <p class="signoff"><a href="../../#players">Back to the board</a></p>
