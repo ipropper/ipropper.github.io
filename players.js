@@ -75,7 +75,7 @@ var PLAYERS = [
     death: "Daisy’s wrath",
     timeline: [
       { media: "clip-1.jpg" },
-      { media: "clip-2.jpg" },
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/phil2.mp4", poster: "clip-2.jpg" },
       { media: "cloak-and-dagger.webp" }
     ]
   },
@@ -189,7 +189,7 @@ var PLAYERS = [
     name: "Gautham", slug: "gautham", role: "faithful", src: "player-24.jpg",
     death: "Early flight",
     timeline: [
-      { media: "clip-1.jpg" }
+      { clip: "https://pub-ffcac53264b949d8b21c3a4641010a8b.r2.dev/gautham.mp4", poster: "clip-1.jpg" }
     ]
   }
 ];
