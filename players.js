@@ -52,7 +52,8 @@ var PLAYERS = [
   { name: "Navya", slug: "navya", role: "faithful", src: "players/player-20.jpg" },
   { name: "Kushal", slug: "kushal", role: "faithful", src: "players/player-21.jpg" },
   { name: "Zac", slug: "zac", role: "traitor", src: "players/player-22.jpg" },
-  { name: "Dan", slug: "dan", role: "faithful", src: "players/player-23.jpg" }
+  { name: "Dan", slug: "dan", role: "faithful", src: "players/player-23.jpg" },
+  { name: "Gautham", slug: "gautham", role: "faithful", src: "players/player-24.jpg" }
 ];
 
 (function () {
