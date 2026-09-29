@@ -19,6 +19,29 @@ const PLAYERS = new Function('return ' + body[1])();
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// clips and stills live beside the page, so their paths need no prefix
+function evidence(p) {
+  const clips = (p.clips || []).map((c) => {
+    const poster = typeof c === 'string' ? '' : ` poster="${esc(c.poster)}"`;
+    const src = typeof c === 'string' ? c : c.src;
+    return `      <video class="clip" controls playsinline preload="metadata"${poster}>
+        <source src="${esc(src)}">
+      </video>`;
+  });
+  const stills = (p.stills || []).map(
+    (s) => `      <img class="clip" src="${esc(s)}" alt="" loading="lazy">`
+  );
+  const items = clips.concat(stills);
+  if (!items.length) return '';
+  return `  <section class="evidence">
+    <h2>Evidence</h2>
+    <div class="evidence-reel">
+${items.join('\n')}
+    </div>
+  </section>
+`;
+}
+
 function page(p) {
   const traitor = p.role === 'traitor';
   return `<!doctype html>
@@ -45,9 +68,11 @@ function page(p) {
   <img class="dossier-shot" src="../${esc(path.basename(p.src))}" alt="${esc(p.name)}">
   <h1>${esc(p.name)}</h1>
   <p class="verdict-badge ${traitor ? 'is-traitor' : 'is-faithful'}">${traitor ? 'Traitor' : 'Faithful'}</p>
+${p.death ? `  <p class="dossier-death"><span>Cause of death</span>${esc(p.death)}</p>\n` : ''}\
   <p class="dossier-line">${traitor
     ? 'Sat at the table every night and lied through all of it.'
     : 'Played it straight the whole weekend.'}</p>
+${evidence(p)}\
   <img class="dagger" src="../../dagger.svg" alt="">
   <p class="signoff"><a href="../../#players">Back to the board</a></p>
 </main>
@@ -67,7 +92,8 @@ for (const p of PLAYERS) {
 
 // a player dropped from the roster should not leave a live page behind
 for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-  if (entry.isDirectory() && !wanted.has(entry.name)) {
+  const isPage = entry.isDirectory() && fs.existsSync(path.join(dir, entry.name, 'index.html'));
+  if (isPage && !wanted.has(entry.name)) {
     fs.rmSync(path.join(dir, entry.name), { recursive: true });
     console.log('removed', entry.name);
   }

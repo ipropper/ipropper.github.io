@@ -481,6 +481,45 @@ h2{
 }
 .verdict-badge.is-traitor{background:var(--blood);border-color:var(--blood);color:var(--paper)}
 .verdict-badge.is-faithful{background:none;color:var(--ink)}
+.dossier-death{
+  margin:0 0 1rem;
+  font-family:"Spectral", Georgia, serif;
+  font-size:1rem;
+  color:var(--ink);
+}
+.dossier-death span{
+  display:block;
+  margin-bottom:.15rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--blood);
+}
+.evidence{margin:2.2rem 0 .5rem}
+.evidence h2{
+  margin:0 0 .9rem;
+  font-family:"Cinzel Decorative", "Spectral", Georgia, serif;
+  font-size:.64rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.evidence-reel{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(9rem, 1fr));
+  gap:.8rem;
+}
+.clip{
+  display:block;
+  width:100%;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  background:var(--paper-deep);
+  border:1px solid var(--ink);
+}
 .dossier-line{
   margin:0;
   font-family:"IM Fell English", "Spectral", Georgia, serif;

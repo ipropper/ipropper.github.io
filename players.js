@@ -2,10 +2,16 @@
 //
 // Add a player by dropping the photo in players/ and appending here,
 // then re-run build-players.mjs to write their page at players/<slug>/.
+// Optional per player: `death` (a cause, shown under the badge) and
+// `clips` / `stills`, whose paths are relative to that player's folder.
 // The grid is 3 across on phones and 5 on desktop, and the red thread
 // is redrawn from wherever the cards actually land.
 var PLAYERS = [
-  { name: "Alex", slug: "alex", role: "faithful", src: "players/player-1.jpg" },
+  {
+    name: "Alex", slug: "alex", role: "faithful", src: "players/player-1.jpg",
+    death: "Murdered in Clue",
+    stills: ["still-1.jpg", "still-2.jpg"]
+  },
   { name: "Joe", slug: "joe", role: "traitor", src: "players/player-2.jpg" },
   { name: "Derek", slug: "derek", role: "faithful", src: "players/player-3.jpg" },
   { name: "Dew", slug: "dew", role: "faithful", src: "players/player-4.jpg" },
