@@ -38,7 +38,7 @@ function page(p) {
 <nav class="topnav" aria-label="Sections">
   <a class="nav-brand" href="../../" aria-label="Traitors"><img class="nav-logo" src="../../logo.svg" alt=""></a>
   <div class="nav-links">
-    <a class="tab" href="../../">Back to the board</a>
+    <a class="tab" href="../../#players">Back to the board</a>
   </div>
 </nav>
 <main class="brief dossier">
@@ -49,7 +49,7 @@ function page(p) {
     ? 'Sat at the table every night and lied through all of it.'
     : 'Played it straight the whole weekend.'}</p>
   <img class="dagger" src="../../dagger.svg" alt="">
-  <p class="signoff"><a href="../../">Back to the board</a></p>
+  <p class="signoff"><a href="../../#players">Back to the board</a></p>
 </main>
 </body>
 </html>

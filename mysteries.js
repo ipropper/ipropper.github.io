@@ -95,17 +95,38 @@ var MYSTERIES = [
       .filter(Boolean);
   }
 
-  tabs.forEach(function (tab) {
-    var on = tab.getAttribute('aria-selected') === 'true';
-    targets(tab).forEach(function (el) { el.hidden = !on; });
-    tab.addEventListener('click', function () {
-      tabs.forEach(function (t) {
-        var sel = t === tab;
-        t.setAttribute('aria-selected', String(sel));
-        targets(t).forEach(function (el) { el.hidden = !sel; });
-      });
-      window.scrollTo(0, 0);
+  function select(tab, scroll) {
+    tabs.forEach(function (t) {
+      var sel = t === tab;
+      t.setAttribute('aria-selected', String(sel));
+      targets(t).forEach(function (el) { el.hidden = !sel; });
     });
+    if (scroll) window.scrollTo(0, 0);
+  }
+
+  // each tab answers to a hash, so a player page can link back to #players
+  function slug(tab) { return tab.id.replace(/^tab-/, ''); }
+  function fromHash() {
+    var want = (window.location.hash || '').replace(/^#/, '');
+    return want && tabs.filter(function (t) { return slug(t) === want; })[0];
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      select(tab, true);
+      // replace rather than push, so Back leaves the page instead of the tab
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', '#' + slug(tab));
+      }
+    });
+  });
+
+  var marked = tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0];
+  select(fromHash() || marked || tabs[0], false);
+
+  window.addEventListener('hashchange', function () {
+    var tab = fromHash();
+    if (tab) select(tab, true);
   });
 
   if (!list) return;
