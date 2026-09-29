@@ -2,7 +2,7 @@
 //
 // Add a player by dropping the photo in players/ and appending here,
 // then re-run build-players.mjs to write their page at players/<slug>/.
-// Optional per player: `death` (a cause, shown under the badge) and
+// Optional per player: `death` or `fate` (shown under the badge) and
 // `timeline`, a list of beats. A beat takes any of `text`, `media`
 // (an image) and `clip` (a video, with an optional `poster`); media
 // paths are relative to that player's own folder.
@@ -92,9 +92,29 @@ var PLAYERS = [
     ]
   },
   { name: "Susie", slug: "susie", role: "faithful", src: "players/player-13.jpg" },
-  { name: "Nick", slug: "nick", role: "faithful", src: "players/player-14.jpg" },
-  { name: "Ardyn", slug: "ardyn", role: "faithful", src: "players/player-15.jpg" },
-  { name: "Daniel", slug: "daniel", role: "faithful", src: "players/player-16.jpg" },
+  {
+    name: "Nick", slug: "nick", role: "faithful", src: "players/player-14.jpg",
+    death: "Banishment",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { media: "clip-2.jpg" }
+    ]
+  },
+  {
+    name: "Ardyn", slug: "ardyn", role: "faithful", src: "players/player-15.jpg",
+    fate: "Survived to the bitter end",
+    timeline: [
+      { media: "clip-1.jpg" },
+      { media: "clip-2.jpg" }
+    ]
+  },
+  {
+    name: "Daniel", slug: "daniel", role: "faithful", src: "players/player-16.jpg",
+    death: "First blood",
+    timeline: [
+      { media: "clip-1.jpg" }
+    ]
+  },
   { name: "Check", slug: "check", role: "faithful", src: "players/player-17.jpg" },
   { name: "Sasha", slug: "sasha", role: "faithful", src: "players/player-18.jpg" },
   { name: "Devon", slug: "devon", role: "faithful", src: "players/player-19.jpg" },
